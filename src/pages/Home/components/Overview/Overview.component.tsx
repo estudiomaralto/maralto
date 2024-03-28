@@ -2,7 +2,7 @@ import { Card } from '@/components/Card/Card.component'
 import { Container } from '@/components/Container/Container.component'
 import avessoCover from '@/images/avesso-cover.png'
 
-export function Overview() {
+export default function Overview() {
     return (
         <section className="bg-pale-100 py-20">
             <Container>

@@ -1,6 +1,6 @@
 import { Container } from '@/components/Container/Container.component'
 
-export function Manifesto() {
+export default function Manifesto() {
     return (
         <section className="bg-pale-50 py-20 lg:py-[7.5rem]">
             <Container>
