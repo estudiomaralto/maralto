@@ -38,7 +38,7 @@ export default function Home() {
                     </div>
                 </div>
             </Container>
-            <Marquee autoFill={true}>
+            <Marquee autoFill={true} className="overflow-y-hidden">
                 <span className="text-[11rem] font-medium leading-none tracking-tighter text-pale-50">
                     Criamos obras visuais e estratégicas para negócios que
                     desejam ser sólidos, lucrativos e memoráveis.
