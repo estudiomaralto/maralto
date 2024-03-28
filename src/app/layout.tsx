@@ -3,7 +3,6 @@ import './globals.css'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 
-import { Floating } from '@/components/Floating/Floating.component'
 import { Header } from '@/components/Header/Header.component'
 
 const circularStd = localFont({
@@ -50,7 +49,6 @@ export default function RootLayout({
             <body>
                 <Header />
                 {children}
-                <Floating avalibility="available" />
             </body>
         </html>
     )
