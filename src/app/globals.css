@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html, body{
+  @apply antialiased text-slate-950 h-full
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply tracking-[-0.04em]
+}
+
+p {
+  @apply tracking-[0.0285em] font-normal
+} 
