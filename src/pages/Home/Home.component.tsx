@@ -3,7 +3,7 @@ import Marquee from 'react-fast-marquee'
 import { Container } from '@/components/Container/Container.component'
 import condeHero from '@/images/heroConde.png'
 
-export function Home() {
+export default function Home() {
     return (
         <section
             style={{
