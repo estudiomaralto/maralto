@@ -1,7 +1,7 @@
 import Marquee from 'react-fast-marquee'
 
 import { Container } from '@/components/Container/Container.component'
-import condeHero from '@/images/heroConde.png'
+import condeHero from '@/images/heroConde.webp'
 
 export default function Home() {
     return (
@@ -9,7 +9,7 @@ export default function Home() {
             style={{
                 backgroundImage: `url(${condeHero.src})`,
             }}
-            className={`flex min-h-[calc(100vh-4.125rem)] flex-col justify-between overflow-hidden bg-pale-400 bg-top bg-no-repeat pb-[2.5rem] pt-[7.5rem]`}
+            className={`flex min-h-[calc(100vh-4.125rem)] flex-col justify-between overflow-hidden bg-pale-400 bg-top bg-cover bg-no-repeat pb-[2.5rem] pt-[7.5rem]`}
         >
             <Container>
                 <div className="flex h-[33.75rem] flex-col justify-between gap-5">
