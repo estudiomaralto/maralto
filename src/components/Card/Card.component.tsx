@@ -2,13 +2,12 @@
 
 import { differenceInDays } from 'date-fns'
 import { AnimatePresence, motion } from 'framer-motion'
-import { StaticImport } from 'next/dist/shared/lib/get-img-props'
 import { useState } from 'react'
 
 import { Chevron } from './Chevron.icon'
 
 interface CardProps {
-    src: string | StaticImport
+    src?: string
     title: string
     caption: string
     roles: {
