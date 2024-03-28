@@ -14,20 +14,19 @@ interface FloatingTypes {
 
 export function Floating({ avalibility }: FloatingTypes) {
     const [inView, setInView] = useState<boolean>(false)
-    const offSet = window.scrollY
-    console.log(window.innerHeight)
+    // const offSet = window.scrollY
 
-    useEffect(() => {
-        function handleCatchScroll() {
-            const isAboveThreshold =
-                window.scrollY > Number(window.innerHeight / 3)
-            setInView(isAboveThreshold)
-        }
+    // useEffect(() => {
+    //     function handleCatchScroll() {
+    //         const isAboveThreshold =
+    //             window.scrollY > Number(window.innerHeight / 3)
+    //         setInView(isAboveThreshold)
+    //     }
 
-        window.addEventListener('scroll', handleCatchScroll)
+    //     window.addEventListener('scroll', handleCatchScroll)
 
-        return () => window.removeEventListener('scroll', handleCatchScroll)
-    }, [offSet])
+    //     return () => window.removeEventListener('scroll', handleCatchScroll)
+    // }, [offSet])
 
     return (
         inView && (
