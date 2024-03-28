@@ -32,8 +32,8 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="flex w-full justify-between border-t-[.0625rem] border-pale-50 border-opacity-80 pt-4 text-[1.0625rem] text-pale-50">
-                        <span>Estúdio Maralto®</span>
+                    <div className="flex w-full justify-between border-t-[.13rem] border-pale-50 border-opacity-80 pt-4 text-[1.0625rem] text-pale-50">
+                        <span>Estúdio Maralto</span>
                         <span>©{new Date().getFullYear()}</span>
                     </div>
                 </div>
