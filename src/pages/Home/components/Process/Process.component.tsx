@@ -1,9 +1,9 @@
 import { Container } from '@/components/Container/Container.component'
 import { Divider } from '@/components/Divider/Divider.component'
 
-import { Detail } from './components/Detail.component'
+import Detail from './components/Detail.component'
 
-export function Process() {
+export default function Process() {
     return (
         <section className="bg-pale-50 py-20 lg:py-[7.5rem]">
             <Container className="flex flex-col gap-16">

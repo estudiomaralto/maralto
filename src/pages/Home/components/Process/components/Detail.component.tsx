@@ -1,6 +1,6 @@
 import processImage from '@/images/process-img.svg'
 
-export function Detail() {
+export default function Detail() {
     return (
         <div className="flex items-center justify-between border-b border-b-slate-200 pb-8">
             <div className="flex flex-col gap-12">

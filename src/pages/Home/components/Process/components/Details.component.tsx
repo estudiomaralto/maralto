@@ -1,3 +1,3 @@
-export function Details() {
+export default function Details() {
     return <div>Details.component</div>
 }

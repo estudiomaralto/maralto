@@ -2,7 +2,7 @@ import { Card } from '@/components/Card/Card.component'
 import { Container } from '@/components/Container/Container.component'
 import avessoCover from '@/images/avesso-cover.png'
 
-export function Projects() {
+export default function Projects() {
     return (
         <section className="bg-pale-100 py-20 lg:py-[7.5rem]">
             <Container className="flex flex-col gap-16">
