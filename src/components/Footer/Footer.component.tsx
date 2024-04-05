@@ -117,7 +117,7 @@ export function Footer() {
                             </div>
                         </ul>
                     </div>
-                    <div className="flex flex-col justify-between gap-4 border-t border-blue-600 pt-5 text-[.875rem] font-bold uppercase md:flex-row">
+                    <div className="flex flex-col justify-between gap-4 border-t border-blue-500 pt-5 text-[.875rem] font-bold uppercase md:flex-row">
                         <span>©2024 estúdio maralto</span>
                         <span>Todos os direitos reservados</span>
                     </div>
