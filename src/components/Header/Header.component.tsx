@@ -8,13 +8,13 @@ export function Header() {
     return (
         <header className="py-5">
             <Container>
-                <div className="grid grid-cols-4">
+                <div className="grid grid-cols-3 justify-between gap-4 lg:grid-cols-4">
                     <Maralto />
                     <Time />
                     <span className="text-[1.0625rem] font-normal">
-                        26° São Paulo, São Paulo
+                        26° Londrina, PR
                     </span>
-                    <div className="flex justify-end gap-5 text-[1.0625rem]">
+                    <div className="hidden justify-end gap-5 text-[1.0625rem] md:flex">
                         <Link href={'/'}>Projetos</Link>
                         <Link href={'/'}>Sobre</Link>
                         <button>Contato</button>

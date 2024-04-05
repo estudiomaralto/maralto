@@ -6,7 +6,7 @@ export default function Overview() {
     return (
         <section className="bg-pale-100 py-20">
             <Container>
-                <div className="grid grid-cols-3">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3">
                     <Card
                         src={avessoCover.src}
                         roles={[

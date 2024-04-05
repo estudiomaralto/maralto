@@ -48,33 +48,33 @@ export function Card({ src, caption, createdAt, roles, title }: CardProps) {
                     >
                         <div
                             onClick={handleSetCollapse}
-                            className="group flex w-full cursor-pointer flex-col gap-4 rounded-lg bg-pale-50 px-4 py-6 transition hover:bg-pale-950"
+                            className="group flex w-full cursor-pointer flex-col gap-4 rounded-lg bg-pale-50 px-4 py-6 transition hover:bg-pale-200"
                         >
                             <div className="flex items-start justify-between">
                                 <div className="flex w-full flex-col gap-1">
                                     <h3 className="text-[1.1875rem] font-medium leading-none text-pale-950 transition group-hover:text-pale-50">
                                         {title}
                                     </h3>
-                                    <span className="text-[.9375rem] font-normal leading-none text-pale-600 transition group-hover:text-pale-400">
+                                    <span className="text-[.9375rem] font-normal leading-none text-pale-600 transition group-hover:text-pale-100">
                                         {caption}
                                     </span>
                                 </div>
-                                <div className="flex items-center gap-2 transition group-hover:text-pale-400">
+                                <div className="group-hover:text-pale-1 00 flex items-center gap-2 transition group-hover:text-pale-100">
                                     <Chevron className="rotate-180" />
                                 </div>
                             </div>
 
-                            <hr className="border-pale-200 group-hover:border-pale-500" />
+                            <hr className="border-pale-200 group-hover:border-pale-100" />
 
                             {roles.map((role, index) => (
                                 <div
                                     className="flex items-center justify-between text-[.9375rem] text-pale-900"
                                     key={index}
                                 >
-                                    <span className="font-medium group-hover:text-pale-400">
+                                    <span className="font-medium group-hover:text-pale-100">
                                         {role.role}
                                     </span>
-                                    <span className="group-hover:text-pale-400">
+                                    <span className="group-hover:text-pale-100">
                                         {role.time}
                                     </span>
                                 </div>
@@ -89,19 +89,19 @@ export function Card({ src, caption, createdAt, roles, title }: CardProps) {
                     >
                         <div
                             onClick={handleSetCollapse}
-                            className="group flex cursor-pointer flex-col gap-4 rounded-lg bg-pale-50 px-4 py-6 transition hover:bg-pale-950"
+                            className="group flex cursor-pointer flex-col gap-4 rounded-lg bg-pale-50 px-4 py-6 transition hover:bg-pale-200"
                         >
                             <div className="flex items-start justify-between">
                                 <div className="flex flex-col gap-1">
                                     <h3 className="text-[1.1875rem] font-medium leading-none text-pale-950 transition group-hover:text-pale-50">
                                         {title}
                                     </h3>
-                                    <span className="text-[.9375rem] font-normal leading-none text-pale-600 transition group-hover:text-pale-400">
+                                    <span className="text-[.9375rem] font-normal leading-none text-pale-600 transition group-hover:text-pale-100">
                                         {caption}
                                     </span>
                                 </div>
-                                <div className="flex items-center gap-2 text-pale-600 transition group-hover:text-pale-400">
-                                    <span className="text-[.9375rem] leading-none transition group-hover:text-pale-400">
+                                <div className="flex items-center gap-2 text-pale-600 transition group-hover:text-pale-100">
+                                    <span className="text-[.9375rem] leading-none transition group-hover:text-pale-50">
                                         Mais detalhes
                                     </span>
                                     <Chevron />

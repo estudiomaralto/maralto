@@ -9,16 +9,16 @@ export default function Manifesto() {
                         é hora de adentrar em águas mais profundas.
                     </h2>
 
-                    <div className="grid grid-cols-3 gap-4">
-                        <div className="flex w-full flex-col gap-10">
+                    <div className="grid gap-8 md:grid-cols-2 md:gap-4 lg:grid-cols-3">
+                        <div className="flex w-full flex-col gap-5 md:gap-10">
                             <div className="border-b border-pale-200 pb-4">
                                 <span className="text-pale-300">01</span>
                             </div>
                             <div className="flex flex-col gap-2">
-                                <h3 className="text-[2rem] font-medium leading-none text-pale-800">
+                                <h3 className="text-[1.4375rem] font-medium leading-none text-pale-800 md:text-[2rem] ">
                                     Posicionamento
                                 </h3>
-                                <p className="font-normal text-pale-300">
+                                <p className="text-[.9375rem] font-normal text-pale-300">
                                     With a solid track record in designing
                                     websites and apps, I deliver strong and
                                     user-friendly digital designs. Solid company
@@ -27,15 +27,15 @@ export default function Manifesto() {
                                 </p>
                             </div>
                         </div>
-                        <div className="flex w-full flex-col gap-10">
+                        <div className="flex w-full flex-col gap-5 md:gap-10">
                             <div className="border-b border-pale-200 pb-4">
                                 <span className="text-pale-300">02</span>
                             </div>
                             <div className="flex flex-col gap-2">
-                                <h3 className="text-[2rem] font-medium leading-none text-pale-800">
+                                <h3 className="text-[1.4375rem] font-medium leading-none text-pale-800 md:text-[2rem]">
                                     Visual
                                 </h3>
-                                <p className="text-pale-300">
+                                <p className="text-[.9375rem] text-pale-300">
                                     With a solid track record in designing
                                     websites and apps, I deliver strong and
                                     user-friendly digital designs. Solid company
@@ -44,15 +44,15 @@ export default function Manifesto() {
                                 </p>
                             </div>
                         </div>
-                        <div className="flex w-full flex-col gap-10">
+                        <div className="flex w-full flex-col gap-5 md:gap-10">
                             <div className="border-b border-pale-200 pb-4">
                                 <span className="text-pale-300">03</span>
                             </div>
                             <div className="flex flex-col gap-2">
-                                <h3 className="text-[2rem] font-medium leading-none text-pale-800">
+                                <h3 className="text-[1.4375rem] font-medium leading-none text-pale-800 md:text-[2rem]">
                                     Estratégia
                                 </h3>
-                                <p className="text-pale-300">
+                                <p className="text-[.9375rem] text-pale-300">
                                     With a solid track record in designing
                                     websites and apps, I deliver strong and
                                     user-friendly digital designs. Solid company
