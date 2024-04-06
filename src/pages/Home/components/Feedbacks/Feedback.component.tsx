@@ -1,12 +1,22 @@
-import { Container } from '@/components/Container/Container.component'
+'use client'
 
-export function Feedback() {
+import 'swiper/css'
+
+import { Swiper, SwiperSlide } from 'swiper/react'
+
+import Slide from './components/Slide.component'
+
+export default function Feedback() {
     return (
         <section className="bg-slate-950 py-20 lg:py-[7.5rem]">
-            <Container className="grid grid-cols-12">
-                <div className="h-44 bg-slate-600"></div>
-                <div className="h-44 bg-slate-600"></div>
-            </Container>
+            <Swiper className="">
+                <SwiperSlide>
+                    <Slide />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Slide />
+                </SwiperSlide>
+            </Swiper>
         </section>
     )
 }

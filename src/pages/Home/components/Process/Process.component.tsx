@@ -1,7 +1,7 @@
 import { Container } from '@/components/Container/Container.component'
 import { Divider } from '@/components/Divider/Divider.component'
 
-import Detail from './components/Detail.component'
+import Details from './components/Details.component'
 
 export default function Process() {
     return (
@@ -14,8 +14,7 @@ export default function Process() {
                     <Divider />
                 </div>
 
-                <Detail />
-                <Detail />
+                <Details />
             </Container>
         </section>
     )

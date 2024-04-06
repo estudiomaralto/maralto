@@ -5,6 +5,7 @@ import localFont from 'next/font/local'
 
 import { Footer } from '@/components/Footer/Footer.component'
 import { Header } from '@/components/Header/Header.component'
+import { Providers } from '@/providers/Providers.context'
 
 const circularStd = localFont({
     src: [
@@ -46,12 +47,14 @@ export default function RootLayout({
     children: React.ReactNode
 }>) {
     return (
-        <html lang="pt-br" className={circularStd.className}>
-            <body>
-                <Header />
-                {children}
-                <Footer />
-            </body>
-        </html>
+        <Providers>
+            <html lang="pt-br" className={circularStd.className}>
+                <body>
+                    <Header />
+                    {children}
+                    <Footer />
+                </body>
+            </html>
+        </Providers>
     )
 }
