@@ -23,7 +23,7 @@ export default async function Projects() {
                 </div>
                 {!loading ? (
                     <div className="grid items-start gap-4 md:grid-cols-2 lg:grid-cols-3">
-                        {projects.slice(0, 2).map((project) => (
+                        {projects.map((project) => (
                             <Link
                                 key={project.id}
                                 href={`/project/${project.slug}`}

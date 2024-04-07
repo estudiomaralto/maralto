@@ -1,10 +1,10 @@
 import { Floating } from '@/components/Floating/Floating.component'
-import Feedback from '@/pages/Home/components/Feedbacks/Feedback.component'
-import Manifesto from '@/pages/Home/components/Manifesto/Manifesto.component'
-import Overview from '@/pages/Home/components/Overview/Overview.component'
-import Process from '@/pages/Home/components/Process/Process.component'
-import Projects from '@/pages/Home/components/Projects/Projects.component'
-import Home from '@/pages/Home/Home.component'
+import Feedback from '@/ui/Home/components/Feedbacks/Feedback.component'
+import Manifesto from '@/ui/Home/components/Manifesto/Manifesto.component'
+import Overview from '@/ui/Home/components/Overview/Overview.component'
+import Process from '@/ui/Home/components/Process/Process.component'
+import Projects from '@/ui/Home/components/Projects/Projects.component'
+import Home from '@/ui/Home/Home.component'
 
 export default function Initial() {
     return (
