@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-import { process } from '@/contents/process.content'
+import { process } from '@/_contents/process.content'
 
 import Detail from './Detail.component'
 

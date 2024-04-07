@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@apollo/client": "^3.9.10",
     "date-fns": "^3.6.0",
     "framer-motion": "^11.0.22",
     "next": "14.1.4",

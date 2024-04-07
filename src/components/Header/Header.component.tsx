@@ -6,10 +6,12 @@ import { Maralto } from './components/Maralto.icon'
 
 export function Header() {
     return (
-        <header className="py-5">
+        <header className="bg-pale-50 py-5">
             <Container>
                 <div className="grid grid-cols-3 justify-between gap-4 lg:grid-cols-4">
-                    <Maralto />
+                    <Link href={'/'}>
+                        <Maralto />
+                    </Link>
                     <Time />
                     <span className="text-[1.0625rem] font-normal">
                         26° Londrina, PR

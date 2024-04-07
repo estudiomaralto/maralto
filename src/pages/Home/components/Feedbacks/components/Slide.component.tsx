@@ -1,6 +1,6 @@
 'use client'
 
-import { useSwiper, useSwiperSlide } from 'swiper/react'
+import { useSwiper } from 'swiper/react'
 
 import { Container } from '@/components/Container/Container.component'
 import projectImage from '@/images/avesso-cover.png'
@@ -8,7 +8,7 @@ import clientImage from '@/images/condeProfile.png'
 
 export default function Slide() {
     const swiper = useSwiper()
-    const swiperSlide = useSwiperSlide()
+
     return (
         <Container>
             <div className="grid h-full gap-4 md:grid-cols-12">

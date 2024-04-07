@@ -14,7 +14,7 @@ export default function Home() {
             <Container>
                 <div className="flex w-full flex-col gap-4 md:flex-row md:justify-between">
                     <div className="w-full max-w-[26.25rem]">
-                        <h1 className="text-[2.75rem] font-medium leading-none text-pale-50">
+                        <h1 className="text-[1.6875rem] font-medium leading-none text-pale-50 md:text-[2.75rem]">
                             Criamos obras visuais e estratégicas para negócios
                             que desejam ser sólidos, lucrativos e memoráveis.
                         </h1>

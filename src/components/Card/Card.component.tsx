@@ -25,27 +25,27 @@ export function Card({ src, caption, createdAt, roles, title }: CardProps) {
         setCollapse((preState) => !preState)
     }
     return (
-        <div className="rounded-lg bg-pale-50">
-            <div className="relative overflow-hidden rounded-lg">
-                {caseTime < 30 && (
-                    <span className="leading none absolute left-4 top-4 z-10 rounded-full bg-slate-50 px-[.6875rem] py-[.4375rem] text-[.9375rem] font-medium text-slate-950">
-                        Nova obra
-                    </span>
-                )}
-                <img
-                    src={src}
-                    alt="Image de Case"
-                    className="h-ful cover w-full"
-                />
-            </div>
+        <AnimatePresence>
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+            >
+                <div className="rounded-lg bg-pale-50">
+                    <div className="relative h-[26.25rem] overflow-hidden rounded-lg">
+                        {caseTime < 30 && (
+                            <span className="leading none absolute left-4 top-4 z-10 rounded-full bg-slate-50 px-[.6875rem] py-[.4375rem] text-[.9375rem] font-medium text-slate-950">
+                                Nova obra
+                            </span>
+                        )}
+                        <img
+                            src={src}
+                            alt="Image de Case"
+                            className="h-full w-full object-cover"
+                        />
+                    </div>
 
-            <AnimatePresence>
-                {collapse ? (
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                    >
+                    {collapse ? (
                         <div
                             onClick={handleSetCollapse}
                             className="group flex w-full cursor-pointer flex-col gap-4 rounded-lg bg-pale-50 px-4 py-6 transition hover:bg-pale-200"
@@ -80,13 +80,7 @@ export function Card({ src, caption, createdAt, roles, title }: CardProps) {
                                 </div>
                             ))}
                         </div>
-                    </motion.div>
-                ) : (
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                    >
+                    ) : (
                         <div
                             onClick={handleSetCollapse}
                             className="group flex cursor-pointer flex-col gap-4 rounded-lg bg-pale-50 px-4 py-6 transition hover:bg-pale-200"
@@ -108,9 +102,9 @@ export function Card({ src, caption, createdAt, roles, title }: CardProps) {
                                 </div>
                             </div>
                         </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-        </div>
+                    )}
+                </div>
+            </motion.div>
+        </AnimatePresence>
     )
 }
