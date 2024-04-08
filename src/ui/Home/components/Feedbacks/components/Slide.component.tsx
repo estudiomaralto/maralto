@@ -1,52 +1,51 @@
 'use client'
 
+import Link from 'next/link'
 import { useSwiper } from 'swiper/react'
 
+import { Feedback } from '@/@types/hygraph/feedbacks.type'
 import { Container } from '@/components/Container/Container.component'
-import projectImage from '@/images/avesso-cover.png'
-import clientImage from '@/images/condeProfile.png'
 
-export default function Slide() {
+export default function Slide({ feedback }: { feedback: Feedback }) {
     const swiper = useSwiper()
 
     return (
         <Container>
-            <div className="grid h-full gap-4 md:grid-cols-12">
-                <div className="flex flex-col gap-11 md:col-span-3">
-                    <div className="relative flex flex-col items-start gap-11 overflow-hidden rounded-xl">
-                        <div className="absolute left-3 top-3 rounded-full bg-slate-50 px-[.6875rem] py-2 text-[.9375rem] font-medium">
+            <div className="grid h-full gap-5 md:grid-cols-12 md:gap-4">
+                <div className="flex flex-col gap-6 md:col-span-3 md:gap-11">
+                    <Link
+                        href={`/project/${feedback.project?.slug}`}
+                        className="relative flex flex-col items-start gap-11 overflow-hidden rounded-xl"
+                    >
+                        <div className="absolute left-3 top-3 rounded-full bg-slate-50 px-[.6875rem] py-[.6875rem] text-[.9375rem] font-medium leading-none">
                             Veja essa obra
                         </div>
                         <img
-                            src={projectImage.src}
-                            className="h-[25.5rem] object-cover"
+                            src={feedback?.project?.cover?.url}
+                            className="h-[24.25rem] object-cover md:h-[25.5rem]"
                             alt="Imagem do Projeto"
                         />
-                    </div>
+                    </Link>
 
                     <div className="flex items-center gap-4">
                         <img
-                            src={clientImage.src}
+                            src={feedback?.client.profile.url}
                             alt="Imagem do Cliente"
-                            className="h-14 w-14 rounded-full"
+                            className="h-10 w-10 rounded-full md:h-14 md:w-14"
                         />
                         <div>
-                            <h4 className="text-[1.0625rem] font-medium text-slate-50">
-                                Gabriel Santos
+                            <h4 className="text-[.9375rem] font-medium text-slate-50 md:text-[1.0625rem]">
+                                {feedback?.client.name}
                             </h4>
-                            <span className="text-[.9375rem] font-medium text-slate-400">
-                                CEO da Avesso
+                            <span className="text-[.9375rem] font-medium leading-none text-slate-400 md:text-[.9375rem]">
+                                {feedback?.client.role}
                             </span>
                         </div>
                     </div>
                 </div>
-                <div className="flex h-full max-w-[43rem] flex-col justify-between md:col-span-full md:col-start-5">
-                    <p className="text-[1.8125rem] font-medium leading-tight text-slate-50">
-                        Foi um prazer enorme contar com o trabalho da Maralto.
-                        Souberam ler, identificar e nos entregar um design
-                        primoroso. Exatamente o que estávamos buscando. Além
-                        disso, se mantiveram prestativos e disponíveis enquanto
-                        construímos todo o ambiente.
+                <div className="flex h-full flex-col justify-between gap-10 md:col-span-full md:col-start-5">
+                    <p className=" text-[1.0625rem] leading-tight text-slate-50 md:text-[1.8125rem] md:font-medium">
+                        {feedback?.content}
                     </p>
 
                     <div className="flex w-full items-center justify-between">

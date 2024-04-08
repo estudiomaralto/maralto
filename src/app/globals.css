@@ -14,3 +14,19 @@ h1, h2, h3, h4, h5, h6 {
 p {
   @apply tracking-[0.0285em] font-normal
 } 
+
+::selection{
+  @apply bg-pale-950 text-pale-50
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-pale-200 transition cursor-grab hover:bg-pale-300
+}
+
+::-webkit-scrollbar {
+  @apply w-1 md:w-2 md:h-2 
+}
+
+::-webkit-scrollbar-track{
+  @apply bg-[transparent]
+}

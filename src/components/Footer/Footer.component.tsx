@@ -3,6 +3,7 @@ import Link from 'next/link'
 import condeProfile from '@/images/condeProfile.png'
 
 import { Container } from '../Container/Container.component'
+import Time from './component/Time.component'
 
 export function Footer() {
     return (
@@ -76,7 +77,7 @@ export function Footer() {
                             Horário
                             <div className="flex flex-col gap-3 leading-none">
                                 <li className="text-[.9375rem] font-normal normal-case text-blue-50">
-                                    15:28:08 GMT+3
+                                    <Time />
                                 </li>
                             </div>
                         </ul>
@@ -117,7 +118,7 @@ export function Footer() {
                             </div>
                         </ul>
                     </div>
-                    <div className="flex flex-col justify-between gap-4 border-t border-blue-500 pt-5 text-[.875rem] font-bold uppercase md:flex-row">
+                    <div className="flex flex-row justify-between gap-4 border-t border-blue-500 pt-5 text-[11px] font-bold uppercase md:text-[.875rem]">
                         <span>©2024 estúdio maralto</span>
                         <span>Todos os direitos reservados</span>
                     </div>

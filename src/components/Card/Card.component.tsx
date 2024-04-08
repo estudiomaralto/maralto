@@ -2,6 +2,8 @@
 
 import { differenceInDays } from 'date-fns'
 import { AnimatePresence, motion } from 'framer-motion'
+import { Url } from 'next/dist/shared/lib/router/router'
+import Link from 'next/link'
 import { useState } from 'react'
 
 import { Chevron } from './Chevron.icon'
@@ -15,9 +17,17 @@ interface CardProps {
         time: string
     }[]
     createdAt: Date
+    href: Url
 }
 
-export function Card({ src, caption, createdAt, roles, title }: CardProps) {
+export function Card({
+    src,
+    caption,
+    createdAt,
+    roles,
+    title,
+    href,
+}: CardProps) {
     const [collapse, setCollapse] = useState<boolean>(false)
     const caseTime = differenceInDays(createdAt, new Date())
 
@@ -32,18 +42,20 @@ export function Card({ src, caption, createdAt, roles, title }: CardProps) {
                 exit={{ opacity: 0 }}
             >
                 <div className="rounded-lg bg-pale-50">
-                    <div className="relative h-[26.25rem] overflow-hidden rounded-lg">
-                        {caseTime < 30 && (
-                            <span className="leading none absolute left-4 top-4 z-10 rounded-full bg-slate-50 px-[.6875rem] py-[.4375rem] text-[.9375rem] font-medium text-slate-950">
-                                Nova obra
-                            </span>
-                        )}
-                        <img
-                            src={src}
-                            alt="Image de Case"
-                            className="h-full w-full object-cover"
-                        />
-                    </div>
+                    <Link href={`${href}`}>
+                        <div className="relative h-[26.25rem] overflow-hidden rounded-lg">
+                            {caseTime < 30 && (
+                                <span className="leading none absolute left-4 top-4 z-10 rounded-full bg-slate-50 px-[.6875rem] py-[.4375rem] text-[.9375rem] font-medium text-slate-950">
+                                    Nova obra
+                                </span>
+                            )}
+                            <img
+                                src={src}
+                                alt="Image de Case"
+                                className="h-full w-full object-cover"
+                            />
+                        </div>
+                    </Link>
 
                     {collapse ? (
                         <div

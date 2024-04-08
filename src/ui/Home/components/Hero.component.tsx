@@ -1,9 +1,12 @@
+import Link from 'next/link'
 import Marquee from 'react-fast-marquee'
 
 import { Container } from '@/components/Container/Container.component'
 import condeHero from '@/images/heroConde.webp'
+import { getLastProjects } from '@/services/getLastProjects'
 
-export default function Home() {
+export default async function Hero() {
+    const { projects } = await getLastProjects({ size: 3 })
     return (
         <section
             style={{
@@ -33,9 +36,26 @@ export default function Home() {
 
             <div className="flex flex-col gap-5">
                 <Container>
-                    <div className="flex w-full justify-between border-t-[.13rem] border-pale-50 border-opacity-80 pt-4 text-[1.0625rem] text-pale-50">
-                        <span>Estúdio Maralto</span>
-                        <span>©{new Date().getFullYear()}</span>
+                    <div className="flex flex-col gap-4">
+                        <div className="flex gap-3">
+                            {projects.map((project) => (
+                                <Link
+                                    href={`/project/${project.slug}`}
+                                    key={project.id}
+                                >
+                                    <img
+                                        src={project.cover.url}
+                                        alt="Imagem de projeto"
+                                        className="h-12 w-12 rounded-full object-cover md:h-16 md:w-16"
+                                    />
+                                </Link>
+                            ))}
+                        </div>
+
+                        <div className="flex w-full justify-between border-t-[.13rem] border-pale-50 border-opacity-80 pt-4 text-[1.0625rem] text-pale-50">
+                            <span>Estúdio Maralto</span>
+                            <span>©{new Date().getFullYear()}</span>
+                        </div>
                     </div>
                 </Container>
                 <Marquee autoFill={true} className="overflow-y-auto">

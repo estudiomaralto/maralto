@@ -1,22 +1,13 @@
-'use client'
+import { getFeedbacks } from '@/services/getFeedbacks'
 
-import 'swiper/css'
+import Slider from './components/Slider'
 
-import { Swiper, SwiperSlide } from 'swiper/react'
+export default async function Feedback() {
+    const { feedbacks } = await getFeedbacks()
 
-import Slide from './components/Slide.component'
-
-export default function Feedback() {
     return (
         <section className="bg-slate-950 py-20 lg:py-[7.5rem]">
-            <Swiper className="">
-                <SwiperSlide>
-                    <Slide />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Slide />
-                </SwiperSlide>
-            </Swiper>
+            <Slider feedbacks={feedbacks} />
         </section>
     )
 }

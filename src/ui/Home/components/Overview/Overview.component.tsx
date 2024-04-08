@@ -1,32 +1,37 @@
 import { Card } from '@/components/Card/Card.component'
 import { Container } from '@/components/Container/Container.component'
-import avessoCover from '@/images/avesso-cover.png'
+import { getLastProjects } from '@/services/getLastProjects'
 
-export default function Overview() {
+export default async function Overview() {
+    const { projects, error, loading } = await getLastProjects({ size: 6 })
     return (
         <section className="bg-pale-100 py-20">
             <Container>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3">
-                    <Card
-                        src={avessoCover.src}
-                        roles={[
-                            {
-                                role: 'Design',
-                                time: '15 dias',
-                            },
-                            {
-                                role: 'Branding',
-                                time: '15 dias',
-                            },
-                            {
-                                role: 'Motion',
-                                time: '15 dias',
-                            },
-                        ]}
-                        title="Avesso"
-                        caption="Banco Digital"
-                        createdAt={new Date()}
-                    />
+                    {projects.map((project) => (
+                        <Card
+                            href={`/project/${project.slug}`}
+                            key={project.id}
+                            src={project.media[0].url}
+                            roles={[
+                                {
+                                    role: 'Design',
+                                    time: '15 dias',
+                                },
+                                {
+                                    role: 'Branding',
+                                    time: '15 dias',
+                                },
+                                {
+                                    role: 'Motion',
+                                    time: '15 dias',
+                                },
+                            ]}
+                            createdAt={new Date(project.createdAt)}
+                            title={project.name}
+                            caption={project.industry}
+                        />
+                    ))}
                 </div>
             </Container>
         </section>

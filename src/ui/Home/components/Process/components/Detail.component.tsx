@@ -17,7 +17,7 @@ export default function Detail({
 }) {
     return (
         <div
-            className="flex cursor-pointer flex-col-reverse items-start justify-between gap-6 border-b border-b-slate-200 pb-5 md:flex-row md:items-center md:pb-8"
+            className="flex cursor-pointer flex-col-reverse items-start justify-between gap-6 border-b border-b-slate-200 pb-5 transition duration-200 ease-in hover:border-pale-300 md:flex-row md:items-center md:pb-8"
             onClick={() => handleChangeIndex(index)}
         >
             <div className="flex flex-col gap-8 md:gap-12">

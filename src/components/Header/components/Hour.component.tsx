@@ -1,10 +1,19 @@
 'use client'
 
-import { useContext } from 'react'
+import { ComponentProps, useContext } from 'react'
+import { tv, VariantProps } from 'tailwind-variants'
 
 import { TimeContext } from '@/contexts/timeContext'
 
-export function Time() {
+const clock = tv({
+    base: 'font-medium',
+})
+
+interface ClockProps
+    extends ComponentProps<'div'>,
+        VariantProps<typeof clock> {}
+
+export function Time({ className }: ClockProps) {
     const { time } = useContext(TimeContext)
-    return <span className="text-[1.0625rem] font-medium">{time}</span>
+    return <span className={clock({ className })}>{time}</span>
 }

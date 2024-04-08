@@ -7,10 +7,5 @@ export default async function Page({
     params: { slug: string }
 }) {
     const { project } = await getSingleProject({ slug })
-    return (
-        <Container>
-            {slug}
-            {project.name}
-        </Container>
-    )
+    return <Container>{project?.name}</Container>
 }

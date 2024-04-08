@@ -19,11 +19,12 @@ export default function Manifesto() {
                                     Posicionamento
                                 </h3>
                                 <p className="text-[.9375rem] font-normal text-pale-300">
-                                    With a solid track record in designing
-                                    websites and apps, I deliver strong and
-                                    user-friendly digital designs. Solid company
-                                    branding is the foundation of any succesful
-                                    website.
+                                    Através do diagnóstico estratégico buscamos
+                                    entender os objetivos, dores e dificuldades
+                                    que o seu negócio enfrenta atualmente e
+                                    buscamos maneiras de resolver estes
+                                    problemas com ajustes ou adaptações no
+                                    posicionamento da empresa com o cliente.
                                 </p>
                             </div>
                         </div>
@@ -36,11 +37,13 @@ export default function Manifesto() {
                                     Visual
                                 </h3>
                                 <p className="text-[.9375rem] text-pale-300">
-                                    With a solid track record in designing
-                                    websites and apps, I deliver strong and
-                                    user-friendly digital designs. Solid company
-                                    branding is the foundation of any succesful
-                                    website.
+                                    Após definir o posicionamento, vamos
+                                    concretizar todas as decisões estratégicas
+                                    que serão aplicadas no negócio através do
+                                    design com um toque de arte. É aqui que
+                                    vamos consolidar o projeto, seja identidade
+                                    visual, branding, manipulação 3D ou
+                                    editorial.
                                 </p>
                             </div>
                         </div>
@@ -53,11 +56,12 @@ export default function Manifesto() {
                                     Estratégia
                                 </h3>
                                 <p className="text-[.9375rem] text-pale-300">
-                                    With a solid track record in designing
-                                    websites and apps, I deliver strong and
-                                    user-friendly digital designs. Solid company
-                                    branding is the foundation of any succesful
-                                    website.
+                                    Nessa etapa vamos planejar todo o escopo de
+                                    como o projeto surgirá ao mundo. Após
+                                    consolidarmos toda o diagnóstico e
+                                    estratégia visual da empresa, chegou a hora
+                                    de seus clientes vivenciarem uma nova
+                                    experiência com sua marca.
                                 </p>
                             </div>
                         </div>
