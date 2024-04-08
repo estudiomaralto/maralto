@@ -22,7 +22,7 @@ export default function Slide({ feedback }: { feedback: Feedback }) {
                         </div>
                         <img
                             src={feedback?.project?.cover?.url}
-                            className="h-[24.25rem] object-cover md:h-[25.5rem]"
+                            className="h-[24.25rem] w-full object-cover md:h-[25.5rem]"
                             alt="Imagem do Projeto"
                         />
                     </Link>

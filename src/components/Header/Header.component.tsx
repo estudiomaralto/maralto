@@ -13,7 +13,7 @@ export function Header() {
                         <Maralto />
                     </Link>
                     <Time className="text-[.875rem] md:text-[1.0625rem]" />
-                    <span className="text-[.875rem] leading-none md:text-[1.0625rem]">
+                    <span className="text-[.875rem] font-medium leading-none md:text-[1.0625rem]">
                         26° Londrina, PR
                     </span>
                     <div className="hidden justify-end gap-5 leading-none md:flex md:text-[1.0625rem]">
