@@ -7,7 +7,7 @@ export default async function Overview() {
     return (
         <section className="bg-pale-100 py-20">
             <Container>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3">
+                <div className="grid items-start gap-4 md:grid-cols-2 lg:grid-cols-3">
                     {projects.map((project) => (
                         <Card
                             href={`/project/${project.slug}`}

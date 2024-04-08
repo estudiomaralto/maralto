@@ -14,6 +14,11 @@ export async function getSingleProject({ slug }: { slug: string }) {
                     industry
                     slug
                     services
+                    createdAt
+                    cover {
+                        id
+                        url
+                    }
                     media {
                         id
                         url

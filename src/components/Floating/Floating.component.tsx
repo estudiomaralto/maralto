@@ -1,7 +1,6 @@
 'use client'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import { useRef } from 'react'
 
 if (typeof window !== 'undefined') {
     gsap.registerPlugin(useGSAP)
@@ -16,33 +15,8 @@ interface FloatingTypes {
 }
 
 export function Floating({ avalibility }: FloatingTypes) {
-    const container = useRef<HTMLDivElement | any>()
-
-    useGSAP(
-        () => {
-            gsap.from(container.current!, {
-                y: '100%',
-                duration: 0.72,
-                ease: 'circ',
-                scrollTrigger: {
-                    trigger: container.current!,
-                    start: '70% 70%',
-                    end: '20% 20%',
-                    scrub: true,
-                    markers: true,
-                },
-            })
-        },
-        {
-            scope: container!,
-        }
-    )
-
     return (
-        <div
-            ref={container}
-            className="fixed bottom-[1vh] left-[50%] z-10 flex -translate-x-1/2 items-center gap-2 rounded-xl bg-slate-950 bg-opacity-75 px-4 py-[.8125rem] backdrop-blur-md md:gap-4"
-        >
+        <div className="fixed bottom-[1vh] left-[50%] z-10 flex -translate-x-1/2 items-center gap-2 rounded-xl bg-slate-950 bg-opacity-75 px-4 py-[.8125rem] backdrop-blur-md md:gap-4">
             <img
                 src={condeProfile.src}
                 alt="Foto do Marcos Condé"
@@ -60,6 +34,10 @@ export function Floating({ avalibility }: FloatingTypes) {
                     <Availability avalibility={avalibility} />
                 </div>
             </div>
+
+            <button className="flex text-nowrap rounded-full bg-pale-50 px-[.9375rem] py-[.6875rem] text-[.9375rem] leading-none transition hover:bg-pale-950 hover:text-pale-50">
+                Vamos conversar 🡥
+            </button>
         </div>
     )
 }

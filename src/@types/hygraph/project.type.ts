@@ -21,14 +21,19 @@ interface ProjectMedia {
     url: string
 }
 
-interface Project {
+export interface Project {
     id: string
     name: string
     description: string
     industry: string
     slug: string
     services: string[]
+    createdAt: Date
     media: ProjectMedia[]
+    cover: {
+        id: string
+        url: string
+    }
     feedback: ProjectFeedback
 }
 

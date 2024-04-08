@@ -1,5 +1,5 @@
-import { Container } from '@/components/Container/Container.component'
 import { getSingleProject } from '@/services/getSingleProject'
+import Project from '@/ui/Project/Project.component'
 
 export default async function Page({
     params: { slug },
@@ -7,5 +7,5 @@ export default async function Page({
     params: { slug: string }
 }) {
     const { project } = await getSingleProject({ slug })
-    return <Container>{project?.name}</Container>
+    return <Project project={project} />
 }
