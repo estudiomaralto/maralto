@@ -25,7 +25,7 @@ export default function Project({ project }: { project: Project }) {
                                     </p>
                                 </div>
                                 <div>
-                                    <p className="text-[.9375rem] text-slate-400 md:text-[1.0625rem]">
+                                    <p className="text-[.9375rem] text-pale-600 md:text-[1.0625rem]">
                                         {project.description}
                                     </p>
                                 </div>
