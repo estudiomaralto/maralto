@@ -52,7 +52,7 @@ export default function Detail({
                 <img
                     src={src}
                     alt="Imagem do processo"
-                    className="h-8 w-8 md:h-72 md:w-72"
+                    className="h-20 w-20 md:h-72 md:w-72"
                 />
             )}
         </div>
