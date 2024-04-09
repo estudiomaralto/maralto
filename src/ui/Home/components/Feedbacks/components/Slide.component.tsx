@@ -44,7 +44,7 @@ export default function Slide({ feedback }: { feedback: Feedback }) {
                     </div>
                 </div>
                 <div className="flex h-full flex-col justify-between gap-10 md:col-span-full md:col-start-5">
-                    <p className=" text-[1.0625rem] leading-tight text-slate-50 md:text-[1.8125rem] md:font-medium">
+                    <p className="text-[1.0625rem] leading-tight text-slate-50 md:text-[1.8125rem] md:font-medium">
                         {feedback?.content}
                     </p>
 

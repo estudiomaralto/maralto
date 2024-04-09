@@ -60,54 +60,52 @@ export function Card({
                     {collapse ? (
                         <div
                             onClick={handleSetCollapse}
-                            className="group flex w-full cursor-pointer flex-col gap-4 rounded-lg bg-pale-50 px-4 py-6 transition hover:bg-pale-200"
+                            className="flex w-full cursor-pointer flex-col gap-4 rounded-lg bg-pale-50 px-4 py-6"
                         >
                             <div className="flex items-start justify-between">
                                 <div className="flex w-full flex-col gap-1">
-                                    <h3 className="text-[1.1875rem] font-medium leading-none text-pale-950 transition group-hover:text-pale-50">
+                                    <h3 className="text-[1.1875rem] font-medium leading-none text-pale-950">
                                         {title}
                                     </h3>
-                                    <span className="text-[.9375rem] font-normal leading-none text-pale-600 transition group-hover:text-pale-100">
+                                    <span className="text-[.9375rem] font-normal leading-none text-pale-600">
                                         {caption}
                                     </span>
                                 </div>
-                                <div className="group-hover:text-pale-1 00 flex items-center gap-2 transition group-hover:text-pale-100">
+                                <div className="flex items-center gap-2">
                                     <Chevron className="rotate-180" />
                                 </div>
                             </div>
 
-                            <hr className="border-pale-200 group-hover:border-pale-100" />
+                            <hr className="border-pale-200" />
 
                             {roles.map((role, index) => (
                                 <div
                                     className="flex items-center justify-between text-[.9375rem] text-pale-900"
                                     key={index}
                                 >
-                                    <span className="font-medium group-hover:text-pale-100">
+                                    <span className="font-medium">
                                         {role.role}
                                     </span>
-                                    <span className="group-hover:text-pale-100">
-                                        {role.time}
-                                    </span>
+                                    <span>{role.time}</span>
                                 </div>
                             ))}
                         </div>
                     ) : (
                         <div
                             onClick={handleSetCollapse}
-                            className="group flex cursor-pointer flex-col gap-4 rounded-lg bg-pale-50 px-4 py-6 transition hover:bg-pale-200"
+                            className="group flex cursor-pointer flex-col gap-4 rounded-lg bg-pale-50 px-4 py-6"
                         >
                             <div className="flex items-start justify-between">
                                 <div className="flex flex-col gap-1">
-                                    <h3 className="text-[1.1875rem] font-medium leading-none text-pale-950 transition group-hover:text-pale-50">
+                                    <h3 className="text-[1.1875rem] font-medium leading-none text-pale-950">
                                         {title}
                                     </h3>
-                                    <span className="text-[.9375rem] font-normal leading-none text-pale-600 transition group-hover:text-pale-100">
+                                    <span className="text-[.9375rem] font-normal leading-none text-pale-600">
                                         {caption}
                                     </span>
                                 </div>
-                                <div className="flex items-center gap-2 text-pale-600 transition group-hover:text-pale-100">
-                                    <span className="text-[.9375rem] leading-none transition group-hover:text-pale-50">
+                                <div className="flex items-center gap-2 text-pale-600">
+                                    <span className="text-[.9375rem] leading-none">
                                         Mais detalhes
                                     </span>
                                     <Chevron />

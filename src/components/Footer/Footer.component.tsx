@@ -1,11 +1,15 @@
 import Link from 'next/link'
 
+import { WeatherData } from '@/@types/weather.type'
 import condeProfile from '@/images/condeProfile.png'
+import { getWeather } from '@/services/getWeather'
 
 import { Container } from '../Container/Container.component'
 import Time from './component/Time.component'
 
-export function Footer() {
+export async function Footer() {
+    const data: WeatherData = await getWeather()
+
     return (
         <footer className="bg-blue-400 pb-5 pt-16">
             <Container className="flex flex-col gap-12 md:gap-24">
@@ -28,7 +32,7 @@ export function Footer() {
                                     <Link href={'/'}>Início</Link>
                                 </li>
                                 <li className="cursor-pointer text-[.9375rem] font-normal normal-case text-blue-50 hover:text-blue-100">
-                                    <Link href={'/Projects'}>Projetos</Link>
+                                    <Link href={'/projects'}>Projetos</Link>
                                 </li>
                             </div>
                         </ul>
@@ -88,7 +92,7 @@ export function Footer() {
                         <ul className="flex flex-col gap-1 text-[.9375rem] font-bold uppercase text-blue-800">
                             Local
                             <li className="text-[.9375rem] font-normal normal-case leading-none text-blue-50">
-                                19° Little Londres, Paraná
+                                {data.main.temp.toFixed(0)}° Londrina, Paraná
                             </li>
                         </ul>
                         <ul className="flex flex-col gap-1 text-[.9375rem] font-bold uppercase text-blue-800">
@@ -103,9 +107,7 @@ export function Footer() {
                                         Instagram
                                     </a>
                                 </li>
-                                <li className="cursor-pointer text-[.9375rem] font-normal normal-case text-blue-50 hover:text-blue-100">
-                                    <a href={''}>Linkedin</a>
-                                </li>
+
                                 <li className="cursor-pointer text-[.9375rem] font-normal normal-case text-blue-50 hover:text-blue-100">
                                     <a
                                         href={

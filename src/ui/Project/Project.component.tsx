@@ -3,7 +3,7 @@ import { Container } from '@/components/Container/Container.component'
 
 export default function Project({ project }: { project: Project }) {
     return (
-        <section className="bg-pale-50 py-20 pt-14 lg:pb-[7.5rem] lg:pt-[4rem]">
+        <section className="bg-pale-50 py-20 pt-14 lg:pb-[7.5rem] lg:pt-[6.5rem]">
             <Container>
                 <div className="flex flex-col gap-10 md:gap-16">
                     <div className="w-full">
