@@ -11,7 +11,7 @@ export async function Header() {
     const data: WeatherData = await getWeather()
 
     return (
-        <header className="fixed left-0 right-0 top-0 z-20 border-b border-pale-100 bg-pale-50 py-5">
+        <header className="fixed left-0 right-0 top-0 z-20 bg-pale-50 py-5">
             <Container>
                 <div className="grid grid-cols-3 items-center justify-between gap-4 lg:grid-cols-4">
                     <Link href={'/'}>

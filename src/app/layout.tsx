@@ -49,7 +49,7 @@ export default function RootLayout({
     return (
         <Providers>
             <html lang="pt-br" className={circularStd.className}>
-                <body>
+                <body className="bg-pale-50">
                     <Header />
                     {children}
                     <Footer />
