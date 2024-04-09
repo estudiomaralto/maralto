@@ -7,6 +7,7 @@ export default function Availability({
         <>
             {avalibility === 'available' ? (
                 <svg
+                    className="animate-pulse"
                     width="12"
                     height="12"
                     viewBox="0 0 12 12"
@@ -34,6 +35,7 @@ export default function Availability({
                 </svg>
             ) : (
                 <svg
+                    className="animate-pulse"
                     width="12"
                     height="12"
                     viewBox="0 0 12 12"

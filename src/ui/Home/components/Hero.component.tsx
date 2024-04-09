@@ -12,7 +12,7 @@ export default async function Hero() {
             style={{
                 backgroundImage: `url(${condeHero.src})`,
             }}
-            className={`mt-[4.25rem] flex min-h-[calc(100vh-4.5rem)] flex-col justify-between gap-8 overflow-hidden bg-pale-400 bg-cover bg-top bg-no-repeat pb-[2.5rem] pt-16 md:pt-[7.5rem]`}
+            className={`mt-[7vh] flex min-h-[calc(100vh-7vh)] flex-col justify-between gap-8 overflow-hidden bg-pale-400 bg-cover bg-top bg-no-repeat pb-[2.5rem] pt-16 md:mt-[4.25rem] md:min-h-[calc(100vh-2vh)] md:pt-[7.5rem]`}
         >
             <Container>
                 <div className="flex w-full flex-col gap-4 md:flex-row md:justify-between">

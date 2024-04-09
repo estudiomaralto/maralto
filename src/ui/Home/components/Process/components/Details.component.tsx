@@ -15,9 +15,10 @@ export default function Details() {
 
     return (
         <>
-            {process.map(({ id, title, content, steps }, index) => (
+            {process.map(({ id, title, content, steps, src }, index) => (
                 <Detail
                     key={id}
+                    src={src.src}
                     index={index}
                     handleChangeIndex={handleSetColapse}
                     steps={steps}
