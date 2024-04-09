@@ -1,6 +1,6 @@
 'use client'
 import { ComponentProps, useState } from 'react'
-import { tv, VariantProps } from 'tailwind-variants'
+import { VariantProps, tv } from 'tailwind-variants'
 
 import condeProfile from '@/images/condeProfile.png'
 
@@ -16,7 +16,7 @@ interface FloatingTypes
 const floating = tv({
     slots: {
         base: 'fixed bottom-[1vh] w-full z-10 px-3 md:max-w-[27.75rem]',
-        button: 'flex text-nowrap rounded-full bg-pale-50 px-[.9375rem] py-[.6875rem] text-[.8125rem] leading-none transition hover:bg-pale-950 hover:text-pale-50 md:text-[.9375rem]',
+        button: 'flex items-center gap-1 text-nowrap rounded-full bg-pale-50 px-[.9375rem] py-[.6875rem] text-[.8125rem] leading-none transition hover:bg-pale-950 hover:text-pale-50 md:text-[.9375rem]',
     },
     variants: {
         position: {
@@ -84,7 +84,19 @@ export function Floating({ avalibility }: FloatingTypes) {
                 </div>
 
                 <button className={button({ position: pos })}>
-                    Vamos conversar 🡥
+                    Vamos conversar
+                    <svg
+                        width="9"
+                        height="9"
+                        viewBox="0 0 9 9"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M1.47574 8.7002L0.860352 8.08481L7.07281 1.87236L1.66621 1.50606L2.47207 0.700195L8.5087 1.03719L8.86035 7.07382L8.05449 7.87968L7.68819 2.48774L1.47574 8.7002Z"
+                            fill="currentColor"
+                        />
+                    </svg>
                 </button>
             </Container>
         </div>

@@ -1,24 +1,26 @@
+import { useState } from 'react'
+
 export default function Detail({
-    index,
     title,
     content,
     steps,
-    isCurrent,
-    handleChangeIndex,
     src,
 }: {
-    index: number
     src?: string
     title: string
     content: string
     steps: string[]
-    isCurrent: boolean
-    handleChangeIndex: (index: number) => void
 }) {
+    const [isCurrent, setCurrent] = useState<boolean>()
+
+    function handleSetCurrent() {
+        setCurrent((state) => !state)
+    }
+
     return (
         <div
             className="flex cursor-pointer flex-col-reverse items-start justify-between gap-6 border-b border-b-slate-200 pb-5 transition duration-200 ease-in hover:border-pale-300 md:flex-row md:items-center md:pb-8"
-            onClick={() => handleChangeIndex(index)}
+            onClick={() => handleSetCurrent()}
         >
             <div className="flex w-full justify-between">
                 <div className="flex flex-col gap-8 md:gap-12">
