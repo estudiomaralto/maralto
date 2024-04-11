@@ -86,7 +86,6 @@ export function Floating({ avalibility }: FloatingTypes) {
                 <button
                     onClick={() => {
                         handleSetVisibleContact()
-                        handleSetLeft()
                     }}
                     className={button({ position: pos })}
                 >

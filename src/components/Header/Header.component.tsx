@@ -14,7 +14,7 @@ export async function Header() {
                     <Link href={'/'} className="self-center">
                         <Maralto />
                     </Link>
-                    <div className=" justify-end gap-5 leading-none md:flex md:text-[1.0625rem]">
+                    <div className="hidden justify-end gap-5 leading-none md:flex md:text-[1.0625rem]">
                         <Link
                             href={'/'}
                             className="transition hover:text-pale-300"
