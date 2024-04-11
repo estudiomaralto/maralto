@@ -7,13 +7,13 @@ import Projects from '@/ui/Home/components/Projects/Projects.component'
 
 export default function Initial() {
     return (
-        <>
+        <main>
             <Hero />
             <Manifesto />
             <Overview />
             <Process />
             <Projects />
             <Feedback />
-        </>
+        </main>
     )
 }
