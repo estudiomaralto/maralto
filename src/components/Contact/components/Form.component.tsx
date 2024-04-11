@@ -58,13 +58,13 @@ export function Form() {
                         <span>Qual o seu nome?</span>
                         <input
                             id="name"
-                            className={`block w-full rounded-lg border-[.125rem] border-[transparent] bg-pale-50 p-[.875rem] placeholder:text-pale-600 ${errors.name ? 'text-red-600 border-red-600' : 'text-pale-600'}`}
+                            className={`block w-full rounded-lg border-[.125rem] border-[transparent] bg-pale-50 p-[.875rem] placeholder:text-pale-600 ${errors.name ? 'border-red-600 text-red-600' : 'text-pale-600'}`}
                             placeholder="Marcos Condé"
                             type="text"
                             {...register('name')}
                         />
                         {errors.name && (
-                            <span className="text-red-600 flex items-center gap-2 text-[.8125rem] tracking-[0.04em]">
+                            <span className="flex items-center gap-2 text-[.8125rem] tracking-[0.04em] text-red-600">
                                 <svg
                                     className="animate-pulse"
                                     width="12"
@@ -104,13 +104,13 @@ export function Form() {
                         <span>Seu e-mail</span>
                         <input
                             id="mail"
-                            className={`block w-full rounded-lg border-[.125rem] border-[transparent] bg-pale-50 p-[.875rem] placeholder:text-pale-600 ${errors.mail ? 'text-red-600 border-red-600' : 'text-pale-600'}`}
+                            className={`block w-full rounded-lg border-[.125rem] border-[transparent] bg-pale-50 p-[.875rem] placeholder:text-pale-600 ${errors.mail ? 'border-red-600 text-red-600' : 'text-pale-600'}`}
                             placeholder="email@exemplo.com"
                             type="email"
                             {...register('mail')}
                         />
                         {errors.mail && (
-                            <span className="text-red-600 flex items-center gap-2 text-[.8125rem] tracking-[0.04em]">
+                            <span className="flex items-center gap-2 text-[.8125rem] tracking-[0.04em] text-red-600">
                                 <svg
                                     className="animate-pulse"
                                     width="12"
@@ -162,7 +162,7 @@ export function Form() {
                             ))}
                         </div>
                         {errors.services && (
-                            <span className="text-red-600 flex items-center gap-2 text-[.8125rem] tracking-[0.04em]">
+                            <span className="flex items-center gap-2 text-[.8125rem] tracking-[0.04em] text-red-600">
                                 <svg
                                     className="animate-pulse"
                                     width="12"
