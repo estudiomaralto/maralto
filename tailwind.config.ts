@@ -60,6 +60,12 @@ const config: Config = {
                 '900': '#4b3e38',
                 '950': '#2a211e',
             },
+            red: {
+                100: '#FEE2E4',
+                200: '#FECACD',
+                400: '#F87179',
+                600: '#DC2631',
+            },
         },
         fontFamily: {
             main: ['var(--font-main)'],

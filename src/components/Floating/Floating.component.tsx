@@ -1,7 +1,8 @@
 'use client'
-import { ComponentProps, useState } from 'react'
+import { ComponentProps, useContext, useState } from 'react'
 import { tv, VariantProps } from 'tailwind-variants'
 
+import { ContactContext } from '@/contexts/contactProvider'
 import condeProfile from '@/images/condeProfile.png'
 
 import { Container } from '../Container/Container.component'
@@ -31,6 +32,8 @@ const floating = tv({
 
 export function Floating({ avalibility }: FloatingTypes) {
     const [pos, setPos] = useState<'center' | 'left'>('center')
+
+    const { handleSetVisibleContact } = useContext(ContactContext)
 
     function handleSetLeft() {
         setPos('left')
@@ -83,7 +86,13 @@ export function Floating({ avalibility }: FloatingTypes) {
                     </div>
                 </div>
 
-                <button className={button({ position: pos })}>
+                <button
+                    onClick={() => {
+                        handleSetVisibleContact()
+                        handleSetLeft()
+                    }}
+                    className={button({ position: pos })}
+                >
                     Vamos conversar
                     <svg
                         width="9"

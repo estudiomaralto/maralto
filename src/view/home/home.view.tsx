@@ -1,4 +1,3 @@
-import { Floating } from '@/components/Floating/Floating.component'
 import Feedback from '@/ui/Home/components/Feedbacks/Feedback.component'
 import Hero from '@/ui/Home/components/Hero.component'
 import Manifesto from '@/ui/Home/components/Manifesto/Manifesto.component'
@@ -15,7 +14,6 @@ export default function Initial() {
             <Process />
             <Projects />
             <Feedback />
-            <Floating avalibility="available" />
         </>
     )
 }

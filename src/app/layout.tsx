@@ -3,6 +3,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 
+import { Contact } from '@/components/Contact/Contact.component'
+import { Floating } from '@/components/Floating/Floating.component'
 import { Footer } from '@/components/Footer/Footer.component'
 import { Header } from '@/components/Header/Header.component'
 import { Providers } from '@/providers/Providers.context'
@@ -53,6 +55,8 @@ export default function RootLayout({
                     <Header />
                     {children}
                     <Footer />
+                    <Floating avalibility="available" />
+                    <Contact />
                 </body>
             </html>
         </Providers>

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 import { Container } from '../Container/Container.component'
+import ContactButton from './components/ContactButton.component'
 import { Time } from './components/Hour.component'
 import { Maralto } from './components/Maralto.icon'
 
@@ -20,9 +21,7 @@ export async function Header() {
                         >
                             Projetos
                         </Link>
-                        <button className="transition hover:text-pale-300">
-                            Contato
-                        </button>
+                        <ContactButton />
                     </div>
                 </div>
             </Container>
