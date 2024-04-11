@@ -1,6 +1,6 @@
 'use client'
 import { ComponentProps, useContext, useState } from 'react'
-import { tv, VariantProps } from 'tailwind-variants'
+import { VariantProps, tv } from 'tailwind-variants'
 
 import { ContactContext } from '@/contexts/contactProvider'
 import condeProfile from '@/images/condeProfile.png'
@@ -49,10 +49,7 @@ export function Floating({ avalibility }: FloatingTypes) {
         <div className={base({ position: pos })}>
             <Container className="relative flex w-full items-center gap-2 rounded-xl bg-slate-950 bg-opacity-75 px-4 py-[.8125rem] backdrop-blur-md md:gap-4">
                 {pos === 'center' && (
-                    <div
-                        className="absolute right-2 top-2 cursor-pointer"
-                        onClick={handleSetLeft}
-                    >
+                    <div className="absolute right-2 top-2 cursor-pointer">
                         <svg
                             width="7"
                             height="8"
