@@ -4,7 +4,7 @@ import { Spinner } from '@/components/Spinner/Spinner.component'
 import { getLastProjects } from '@/services/getLastProjects'
 
 export default async function Projects() {
-    const { projects, error, loading } = await getLastProjects({ size: 3 })
+    const { projects, error, loading } = await getLastProjects({ size: 6 })
 
     return (
         <section className="bg-pale-100 py-20 lg:py-[7.5rem]">

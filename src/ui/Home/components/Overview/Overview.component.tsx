@@ -3,7 +3,7 @@ import { Container } from '@/components/Container/Container.component'
 import { getLastProjects } from '@/services/getLastProjects'
 
 export default async function Overview() {
-    const { projects, error, loading } = await getLastProjects({ size: 6 })
+    const { projects, error, loading } = await getLastProjects({ size: 3 })
     return (
         <section className="bg-pale-100 py-20">
             <Container>
