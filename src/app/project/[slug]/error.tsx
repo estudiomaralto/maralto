@@ -1,5 +1,8 @@
-import { redirect } from 'next/navigation'
+'use client'
+import { useRouter } from 'next/router'
 
 export default function Error() {
-    redirect('/')
+    const { replace } = useRouter()
+
+    replace('/')
 }
