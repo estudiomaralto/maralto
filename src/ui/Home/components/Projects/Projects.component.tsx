@@ -5,6 +5,7 @@ import { getLastProjects } from '@/services/getLastProjects'
 
 export default async function Projects() {
     const { projects, error, loading } = await getLastProjects({ size: 6 })
+    console.log(projects)
 
     return (
         <section className="bg-pale-100 py-20 lg:py-[7.5rem]">
@@ -21,7 +22,7 @@ export default async function Projects() {
                 </div>
                 {!loading ? (
                     <div className="grid items-start gap-4 md:grid-cols-2 lg:grid-cols-3">
-                        {projects.map((project) => (
+                        {projects?.map((project) => (
                             <Card
                                 href={`/project/${project.slug}`}
                                 key={project.id}

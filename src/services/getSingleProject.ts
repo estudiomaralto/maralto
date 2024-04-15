@@ -39,6 +39,7 @@ export async function getSingleProject({ slug }: { slug: string }) {
                 }
             }
         `,
+
         variables: {
             slug: slug,
         },

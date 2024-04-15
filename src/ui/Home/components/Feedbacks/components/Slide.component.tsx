@@ -29,7 +29,7 @@ export default function Slide({ feedback }: { feedback: Feedback }) {
 
                     <div className="flex items-center gap-4">
                         <img
-                            src={feedback?.client.profile.url}
+                            src={feedback?.client?.profile.url}
                             alt="Imagem do Cliente"
                             className="h-10 w-10 rounded-full md:h-14 md:w-14"
                         />
