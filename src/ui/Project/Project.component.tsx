@@ -8,7 +8,7 @@ export default function Project({ project }: { project: Project }) {
                 <div className="flex flex-col gap-10 md:gap-16">
                     <div className="w-full">
                         <img
-                            src={project?.cover.url}
+                            src={project?.cover?.url}
                             alt="Capa do Projeto"
                             className="w-full rounded-2xl object-cover md:h-[50.25rem]"
                         />
@@ -18,15 +18,15 @@ export default function Project({ project }: { project: Project }) {
                             <div className="flex flex-col gap-6 md:gap-10">
                                 <div className="flex flex-col gap-1 leading-none">
                                     <h1 className="text-[1.5625rem] font-bold md:text-4xl">
-                                        {project.name}
+                                        {project?.name}
                                     </h1>
                                     <p className=" text-[.9375rem] text-slate-400 md:text-[1.0625rem]">
-                                        {project.industry}
+                                        {project?.industry}
                                     </p>
                                 </div>
                                 <div>
                                     <p className="text-[.9375rem] text-pale-600 md:text-[1.0625rem]">
-                                        {project.description}
+                                        {project?.description}
                                     </p>
                                 </div>
                                 <hr className="border-pale-100" />
@@ -68,7 +68,7 @@ export default function Project({ project }: { project: Project }) {
                                         O que desenvolvemos
                                     </h3>
                                     <div className="flex flex-wrap gap-3">
-                                        {project.services.map(
+                                        {project?.services?.map(
                                             (service, index) => (
                                                 <div
                                                     className="rounded-full bg-blue-500 px-[.9375rem] py-3 leading-none text-blue-50"
@@ -96,7 +96,7 @@ export default function Project({ project }: { project: Project }) {
                                             Nicho
                                         </span>
                                         <span className="text-pale-600">
-                                            {project.industry}
+                                            {project?.industry}
                                         </span>
                                     </div>
                                 </div>
