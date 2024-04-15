@@ -29,16 +29,16 @@ export default function Slide({ feedback }: { feedback: Feedback }) {
 
                     <div className="flex items-center gap-4">
                         <img
-                            src={feedback?.client?.profile.url}
+                            src={feedback?.client?.profile?.url}
                             alt="Imagem do Cliente"
                             className="h-10 w-10 rounded-full md:h-14 md:w-14"
                         />
                         <div>
                             <h4 className="text-[.9375rem] font-medium text-slate-50 md:text-[1.0625rem]">
-                                {feedback?.client.name}
+                                {feedback?.client?.name}
                             </h4>
                             <span className="text-[.9375rem] font-medium leading-none text-slate-400 md:text-[.9375rem]">
-                                {feedback?.client.role}
+                                {feedback?.client?.role}
                             </span>
                         </div>
                     </div>
@@ -66,9 +66,6 @@ export default function Slide({ feedback }: { feedback: Feedback }) {
                                 />
                             </svg>
                         </button>
-                        <span className="font-medium text-slate-50">
-                            {swiper?.activeIndex + 1}/{swiper?.slides?.length}
-                        </span>
                         <button
                             onClick={() => swiper.slideNext()}
                             className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-900"

@@ -26,7 +26,7 @@ export default async function Projects() {
                             <Card
                                 href={`/project/${project.slug}`}
                                 key={project.id}
-                                src={project.media[0].url}
+                                src={project.media[0]?.url}
                                 roles={[
                                     {
                                         role: 'Design',
