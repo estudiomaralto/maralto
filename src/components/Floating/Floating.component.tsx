@@ -17,7 +17,7 @@ interface FloatingTypes
 const floating = tv({
     slots: {
         base: 'fixed bottom-[1vh] w-full z-10 px-3 md:max-w-[27.75rem]',
-        button: 'flex items-center gap-1 text-nowrap rounded-full bg-pale-50 px-[.9375rem] py-[.6875rem] text-[.8125rem] leading-none transition hover:bg-pale-950 hover:text-pale-50 md:text-[.9375rem]',
+        button: 'flex items-center gap-1 text-nowrap rounded-full bg-pale-50 px-[.6875rem] md:px-[.9375rem] py-[.6875rem] text-[.8125rem] leading-none transition hover:bg-pale-950 hover:text-pale-50 md:text-[.9375rem]',
     },
     variants: {
         position: {
@@ -47,7 +47,7 @@ export function Floating({ avalibility }: FloatingTypes) {
 
     return (
         <div className={base({ position: pos })}>
-            <Container className="relative flex w-full items-center gap-2 rounded-xl bg-slate-950 bg-opacity-75 px-4 py-[.8125rem] backdrop-blur-md md:gap-4">
+            <Container className="relative flex w-full items-center gap-2 rounded-xl bg-slate-950 bg-opacity-75 px-3 py-[.8125rem] backdrop-blur-md md:gap-4 md:px-4">
                 {pos === 'center' && (
                     <div
                         onClick={handleSetLeft}
@@ -71,10 +71,10 @@ export function Floating({ avalibility }: FloatingTypes) {
                 <img
                     src={condeProfile.src}
                     alt="Foto do Marcos Condé"
-                    className="h-8 w-8 rounded-full object-cover md:h-12 md:w-12"
+                    className="h-10 w-10 rounded-full object-cover md:h-12 md:w-12"
                 />
 
-                <div className="flex w-full flex-col gap-[.3125rem]">
+                <div className="flex w-full flex-col gap-[.25rem]">
                     <span
                         onClick={handleSetCenter}
                         className="cursor-pointer text-[.9375rem] font-bold leading-none text-slate-50 md:text-[1.0625rem]"

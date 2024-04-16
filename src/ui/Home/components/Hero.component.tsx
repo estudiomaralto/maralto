@@ -22,15 +22,6 @@ export default async function Hero() {
                             que desejam ser sólidos, lucrativos e memoráveis.
                         </h1>
                     </div>
-
-                    <div className="w-full max-w-[19.75rem]">
-                        <p className="text-[1.0625rem] leading-[135%] text-pale-50">
-                            Mussum Ipsum, cacilds vidis litro abertis. Sapien in
-                            monti palavris qui num significa nadis i pareci
-                            latim. Mé faiz elementum girarzis, nisi eros
-                            vermeio.
-                        </p>
-                    </div>
                 </div>
             </Container>
 

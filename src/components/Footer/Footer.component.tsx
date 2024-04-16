@@ -11,20 +11,20 @@ export async function Footer() {
     const data: WeatherData = await getWeather()
 
     return (
-        <footer className="bg-blue-400 pb-5 pt-16">
+        <footer className="bg-blue-400 pb-[10vh] pt-16 md:pb-5">
             <Container className="flex flex-col gap-12 md:gap-24">
                 <div className="flex w-full flex-col gap-12 md:gap-20">
                     <div className="flex max-w-[43rem] flex-col gap-4 md:flex-row md:items-start md:gap-8">
                         <img
                             src={condeProfile.src}
                             alt=""
-                            className="h-16 w-16 rounded-full"
+                            className="h-20 w-20 rounded-full md:h-16 md:w-16"
                         />
                         <h2 className="text-[2.75rem] leading-none tracking-tighter text-blue-50 md:text-[3.5rem] lg:text-[4.75rem]">
                             Vamos criar uma obra memorável?
                         </h2>
                     </div>
-                    <div className="grid gap-8 md:grid-cols-2 md:gap-8 lg:grid-cols-4 lg:gap-4">
+                    <div className="grid gap-8 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-4">
                         <ul className="flex flex-col gap-4 text-[.9375rem] font-bold uppercase text-blue-800">
                             Páginas
                             <div className="flex flex-col gap-3 leading-none">
@@ -33,29 +33,6 @@ export async function Footer() {
                                 </li>
                                 <li className="cursor-pointer text-[.9375rem] font-normal normal-case text-blue-50 hover:text-blue-100">
                                     <Link href={'/projects'}>Projetos</Link>
-                                </li>
-                            </div>
-                        </ul>
-                        <ul className="flex flex-col gap-4 text-[.9375rem] font-bold uppercase text-blue-800">
-                            Projetos
-                            <div className="flex flex-col gap-3 leading-none">
-                                <li className="cursor-pointer text-[.9375rem] font-normal normal-case text-blue-50 hover:text-blue-100">
-                                    Manual Ilustrado
-                                </li>
-                                <li className="cursor-pointer text-[.9375rem] font-normal normal-case text-blue-50 hover:text-blue-100">
-                                    Planner Esponsal
-                                </li>
-                                <li className="cursor-pointer text-[.9375rem] font-normal normal-case text-blue-50 hover:text-blue-100">
-                                    Estudei
-                                </li>
-                                <li className="cursor-pointer text-[.9375rem] font-normal normal-case text-blue-50 hover:text-blue-100">
-                                    JáEditei
-                                </li>
-                                <li className="cursor-pointer text-[.9375rem] font-normal normal-case text-blue-50 hover:text-blue-100">
-                                    Avesso
-                                </li>
-                                <li className="cursor-pointer text-[.9375rem] font-normal normal-case text-blue-50 hover:text-blue-100">
-                                    Êxito
                                 </li>
                             </div>
                         </ul>
@@ -89,7 +66,7 @@ export async function Footer() {
                 </div>
                 <div className="flex flex-col gap-5">
                     <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-center">
-                        <ul className="flex flex-col gap-1 text-[.9375rem] font-bold uppercase text-blue-800">
+                        <ul className="hidden text-[.9375rem] font-bold uppercase text-blue-800 md:flex md:flex-col md:gap-1">
                             Local
                             <li className="text-[.9375rem] font-normal normal-case leading-none text-blue-50">
                                 {data.main.temp.toFixed(0)}° Londrina, Paraná
