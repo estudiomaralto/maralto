@@ -95,7 +95,7 @@ export function Floating({ avalibility }: FloatingTypes) {
                     }}
                     className={button({ position: pos })}
                 >
-                    Vamos conversar
+                    <span className="text-nowraw">Vamos conversar</span>
                     <svg
                         width="10"
                         height="10"

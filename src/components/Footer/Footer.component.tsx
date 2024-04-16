@@ -11,7 +11,7 @@ export async function Footer() {
     const data: WeatherData = await getWeather()
 
     return (
-        <footer className="bg-blue-400 pb-[10vh] pt-16 md:pb-5">
+        <footer className="bg-blue-400 pb-[12vh] pt-16 md:pb-5">
             <Container className="flex flex-col gap-12 md:gap-24">
                 <div className="flex w-full flex-col gap-12 md:gap-20">
                     <div className="flex max-w-[43rem] flex-col gap-4 md:flex-row md:items-start md:gap-8">
