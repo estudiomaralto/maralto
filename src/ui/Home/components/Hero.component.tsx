@@ -10,7 +10,7 @@ export default async function Hero() {
     return (
         <section
             style={{
-                backgroundImage: `url(${condeHero.src})`,
+                backgroundImage: `url(${condeHero.src}) 20% 20%`,
             }}
             className={`mt-[7vh] flex min-h-[calc(80vh)] flex-col justify-between gap-8 overflow-hidden bg-pale-400 bg-cover bg-top bg-no-repeat pb-[2.5rem] pt-16 md:mt-[4.25rem] md:min-h-[calc(100vh-2vh)] md:pt-[7.5rem]`}
         >
