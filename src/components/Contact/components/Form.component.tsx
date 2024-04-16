@@ -104,7 +104,7 @@ export function Form() {
                         <input
                             id="name"
                             className={`block w-full rounded-lg border-[.125rem]  bg-slate-50 p-[.875rem] placeholder:text-pale-600 target:outline-blue-500 focus:outline-blue-500 ${errors.name ? 'text-red-600 outline-red-600' : 'border-slate-100 text-pale-600'}`}
-                            placeholder="Marcos Condé"
+                            placeholder="Seu nome"
                             type="text"
                             {...register('name')}
                         />
