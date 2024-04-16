@@ -77,7 +77,7 @@ export function Floating({ avalibility }: FloatingTypes) {
                 <div className="flex w-full flex-col gap-[.25rem]">
                     <span
                         onClick={handleSetCenter}
-                        className="cursor-pointer text-[.9375rem] font-bold leading-none text-slate-50 md:text-[1.0625rem]"
+                        className="cursor-pointer text-nowrap text-[.9375rem] font-bold leading-none text-slate-50 md:text-[1.0625rem]"
                     >
                         Entre em contato
                     </span>
