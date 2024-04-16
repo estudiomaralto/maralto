@@ -1,6 +1,6 @@
 'use client'
 import { ComponentProps, useContext, useState } from 'react'
-import { VariantProps, tv } from 'tailwind-variants'
+import { tv, VariantProps } from 'tailwind-variants'
 
 import { ContactContext } from '@/contexts/contactProvider'
 import condeProfile from '@/images/condeProfile.png'
