@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useContext, useEffect } from 'react'
+import { useCallback, useContext } from 'react'
 
 import { ContactContext } from '@/contexts/contactProvider'
 
@@ -19,20 +19,10 @@ export function Contact() {
         [handleSetVisibleContact]
     )
 
-    useEffect(() => {
-        if (visibleContact) document.body.style.overflowY = 'hidden'
-        window.addEventListener('keydown', handleEscape)
-
-        return () => {
-            window.removeEventListener('keydown', handleEscape)
-            document.body.removeAttribute('style')
-        }
-    }, [handleEscape, handleSetVisibleContact, visibleContact])
-
     return (
         visibleContact && (
-            <div className="fixed bottom-0 left-0 right-0 top-0 z-50 h-[99vh] w-full rounded-xl bg-slate-50 bg-opacity-75 backdrop-blur-md md:left-auto md:right-1 md:top-1 md:max-w-[37.75rem]">
-                <div className="flex h-full w-full flex-col gap-11 overflow-y-scroll px-4 pt-4 md:px-8 md:pt-8">
+            <div className="fixed bottom-0 left-0 right-0 top-0 z-50 h-[99vh] w-full rounded-xl bg-slate-50 md:left-auto md:right-1 md:top-1 md:max-w-[37.75rem]">
+                <div className="scrollbar-hidden flex h-full w-full flex-col gap-11 overflow-y-scroll px-4 pt-4 md:px-8 md:pt-8">
                     <div>
                         <button onClick={handleSetVisibleContact}>
                             <svg

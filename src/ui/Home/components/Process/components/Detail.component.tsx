@@ -11,7 +11,7 @@ export default function Detail({
     content: string
     steps: string[]
 }) {
-    const [isCurrent, setCurrent] = useState<boolean>()
+    const [isCurrent, setCurrent] = useState<boolean>(true)
 
     function handleSetCurrent() {
         setCurrent((state) => !state)

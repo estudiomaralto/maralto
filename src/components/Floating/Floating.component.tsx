@@ -1,6 +1,6 @@
 'use client'
 import { ComponentProps, useContext, useState } from 'react'
-import { tv, VariantProps } from 'tailwind-variants'
+import { VariantProps, tv } from 'tailwind-variants'
 
 import { ContactContext } from '@/contexts/contactProvider'
 import condeProfile from '@/images/condeProfile.png'
@@ -39,9 +39,9 @@ export function Floating({ avalibility }: FloatingTypes) {
         setPos('left')
     }
 
-    // function handleSetCenter() {
-    //     setPos('center')
-    // }
+    function handleSetCenter() {
+        setPos('center')
+    }
 
     const { base, button } = floating()
 
@@ -49,7 +49,10 @@ export function Floating({ avalibility }: FloatingTypes) {
         <div className={base({ position: pos })}>
             <Container className="relative flex w-full items-center gap-2 rounded-xl bg-slate-950 bg-opacity-75 px-4 py-[.8125rem] backdrop-blur-md md:gap-4">
                 {pos === 'center' && (
-                    <div className="absolute right-2 top-2 cursor-pointer">
+                    <div
+                        onClick={handleSetLeft}
+                        className="absolute right-2 top-2 cursor-pointer"
+                    >
                         <svg
                             width="7"
                             height="8"
@@ -72,7 +75,10 @@ export function Floating({ avalibility }: FloatingTypes) {
                 />
 
                 <div className="flex w-full flex-col gap-[.3125rem]">
-                    <span className="text-[.9375rem] font-bold leading-none text-slate-50 md:text-[1.0625rem]">
+                    <span
+                        onClick={handleSetCenter}
+                        className="cursor-pointer text-[.9375rem] font-bold leading-none text-slate-50 md:text-[1.0625rem]"
+                    >
                         Entre em contato
                     </span>
                     <div className="flex items-center gap-2">
@@ -91,14 +97,14 @@ export function Floating({ avalibility }: FloatingTypes) {
                 >
                     Vamos conversar
                     <svg
-                        width="9"
-                        height="9"
-                        viewBox="0 0 9 9"
+                        width="10"
+                        height="10"
+                        viewBox="0 0 10 10"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                     >
                         <path
-                            d="M1.47574 8.7002L0.860352 8.08481L7.07281 1.87236L1.66621 1.50606L2.47207 0.700195L8.5087 1.03719L8.86035 7.07382L8.05449 7.87968L7.68819 2.48774L1.47574 8.7002Z"
+                            d="M5 0L4.11875 0.88125L7.60625 4.375H0V5.625H7.60625L4.11875 9.11875L5 10L10 5L5 0Z"
                             fill="currentColor"
                         />
                     </svg>

@@ -15,9 +15,8 @@ export function TimeContextProvider({ children }: { children: ReactNode }) {
         const intervalId = setInterval(() => {
             setTime(
                 new Date().toLocaleTimeString([], {
-                    hour: '2-digit',
-                    minute: '2-digit',
-                    second: '2-digit',
+                    hour: 'numeric',
+                    minute: 'numeric',
                 })
             )
         }, 1000)

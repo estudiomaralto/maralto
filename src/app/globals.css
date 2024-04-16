@@ -30,3 +30,12 @@ p {
 ::-webkit-scrollbar-track{
   @apply bg-[transparent]
 }
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none; /* Para navegadores baseados em WebKit como Chrome e Safari */
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;  /* Para Internet Explorer e Edge */
+  scrollbar-width: none;  /* Para Firefox */
+}
