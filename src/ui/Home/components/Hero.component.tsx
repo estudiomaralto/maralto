@@ -32,7 +32,7 @@ export default async function Hero() {
                 <Container>
                     <div className="flex flex-col gap-4">
                         <div className="flex items-center justify-between">
-                            <div className="flex gap-3">
+                            <div className="flex gap-1 md:gap-3">
                                 {projects.map((project) => (
                                     <Link
                                         href={`/project/${project.slug}`}
@@ -58,9 +58,8 @@ export default async function Hero() {
                 </Container>
                 <Marquee autoFill={true} className="flex gap-4 overflow-y-auto">
                     <svg
-                        width="7257"
-                        height="167"
                         viewBox="0 0 7257 167"
+                        className="h-16 md:h-44"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                     >
