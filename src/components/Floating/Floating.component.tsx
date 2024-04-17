@@ -1,6 +1,6 @@
 'use client'
 import { ComponentProps, useContext, useState } from 'react'
-import { tv, VariantProps } from 'tailwind-variants'
+import { tv, type VariantProps } from 'tailwind-variants'
 
 import { ContactContext } from '@/contexts/contactProvider'
 import condeProfile from '@/images/condeProfile.png'
@@ -16,8 +16,8 @@ interface FloatingTypes
 
 const floating = tv({
     slots: {
-        base: 'fixed bottom-[1vh] w-full z-10 px-3 md:max-w-[27.75rem]',
-        button: 'flex items-center gap-1 text-nowrap rounded-full bg-pale-50 px-[.6875rem] md:px-[.9375rem] py-[.6875rem] text-[.8125rem] leading-none transition hover:bg-pale-950 hover:text-pale-50 md:text-[.9375rem]',
+        base: 'fixed bottom-[1vh] w-full z-10 px-3 md:max-w-[444px]',
+        button: 'flex items-center w-full gap-1 text-nowrap rounded-full bg-pale-50 px-[11px] md:px-[15px] py-[11px] text-[13px] leading-none transition hover:bg-pale-950 hover:text-pale-50 md:text-[15px]',
     },
     variants: {
         position: {
@@ -47,7 +47,7 @@ export function Floating({ avalibility }: FloatingTypes) {
 
     return (
         <div className={base({ position: pos })}>
-            <Container className="relative flex w-full items-center gap-2 rounded-xl bg-slate-950 bg-opacity-75 px-3 py-[.8125rem] backdrop-blur-md md:gap-4 md:px-4">
+            <Container className="relative flex w-full items-center gap-2 rounded-xl bg-slate-950 bg-opacity-75 px-3 py-[13px] backdrop-blur-md md:gap-4 md:px-4">
                 {pos === 'center' && (
                     <div
                         onClick={handleSetLeft}
@@ -74,15 +74,15 @@ export function Floating({ avalibility }: FloatingTypes) {
                     className="h-10 w-10 rounded-full object-cover md:h-12 md:w-12"
                 />
 
-                <div className="flex w-full flex-col gap-[.25rem]">
+                <div className="flex w-full flex-col gap-[4px]">
                     <span
                         onClick={handleSetCenter}
-                        className="cursor-pointer text-nowrap text-[.9375rem] font-bold leading-none text-slate-50 md:text-[1.0625rem]"
+                        className="cursor-pointer text-nowrap text-[15px] font-bold leading-none text-slate-50 md:text-[17px]"
                     >
                         Entre em contato
                     </span>
                     <div className="flex items-center gap-2">
-                        <span className="text-[.8125rem] font-medium leading-none text-slate-300 md:text-[.8125rem]">
+                        <span className="text-[13px] font-medium leading-none text-slate-300 md:text-[13px]">
                             Disponibilidade
                         </span>
                         <Availability avalibility={avalibility} />
@@ -95,7 +95,7 @@ export function Floating({ avalibility }: FloatingTypes) {
                     }}
                     className={button({ position: pos })}
                 >
-                    <span className="text-nowraw">Vamos conversar</span>
+                    <span className="text-nowrap">Vamos conversar</span>
                     <svg
                         width="10"
                         height="10"

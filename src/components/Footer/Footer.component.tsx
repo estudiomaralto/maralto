@@ -69,7 +69,7 @@ export async function Footer() {
                         <ul className="hidden text-[.9375rem] font-bold uppercase text-blue-800 md:flex md:flex-col md:gap-1">
                             Local
                             <li className="text-[.9375rem] font-normal normal-case leading-none text-blue-50">
-                                {data.main.temp.toFixed(0)}° Londrina, Paraná
+                                {data?.main?.temp.toFixed(0)}° Londrina, Paraná
                             </li>
                         </ul>
                         <ul className="flex flex-col gap-1 text-[.9375rem] font-bold uppercase text-blue-800">
