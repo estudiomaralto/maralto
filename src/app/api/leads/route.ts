@@ -5,7 +5,7 @@ import { Resend } from 'resend'
 import MaraltoMailTemplate from '@/emails/MaraltoMailTemplate'
 import { createClient } from '@/lib/supabase/server'
 
-const resend = new Resend('re_A6gAFXES_AXf3fh9pZehDg3RVZ5iHdwfu')
+const resend = new Resend('re_NZMdqyzK_D591K6zR3F79M7WrjTFkx2t3')
 
 export async function POST(request: Request) {
     const cookieStore = cookies()
@@ -59,9 +59,9 @@ export async function POST(request: Request) {
         ])
 
         const {} = await resend.emails.send({
-            from: 'Acme <onboarding@resend.dev>',
-            to: ['samuelcardoso555@gmail.com'],
-            subject: 'Hello world',
+            from: 'Maralto <marketing@estudiomaralto.com>',
+            to: ['contato@estudiomaralto.com', 'samuelcardoso555@gmail.com'],
+            subject: 'Novo lead! - Estúdio Maralto',
             react: MaraltoMailTemplate({
                 budget: budgets,
                 industry: industry!,
