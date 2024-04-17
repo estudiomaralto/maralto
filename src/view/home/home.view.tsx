@@ -11,6 +11,7 @@ export default function Initial() {
             <Manifesto />
             <Overview />
             <Process />
+
             <Projects />
         </main>
     )
