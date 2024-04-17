@@ -16,7 +16,7 @@ export async function Header() {
                     </Link>
                     <div className="hidden justify-end gap-5 leading-none md:flex md:text-[1.0625rem]">
                         <Link
-                            href={'/projects'}
+                            href={'/projetos'}
                             className="transition hover:text-pale-300"
                         >
                             Projetos

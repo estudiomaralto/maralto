@@ -14,7 +14,7 @@ export default function Slide({ feedback }: { feedback: Feedback }) {
             <div className="grid h-full gap-5 md:grid-cols-12 md:gap-4">
                 <div className="flex flex-col gap-6 md:col-span-3 md:gap-11">
                     <Link
-                        href={`/project/${feedback.project?.slug}`}
+                        href={`/projetos/${feedback.project?.slug}`}
                         className="relative flex flex-col items-start gap-11 overflow-hidden rounded-xl"
                     >
                         <div className="absolute left-3 top-3 rounded-full bg-slate-50 px-[.6875rem] py-[.6875rem] text-[.9375rem] font-medium leading-none">
