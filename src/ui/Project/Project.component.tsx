@@ -35,25 +35,38 @@ export default function Project({ project }: { project: Project }) {
                                         <h3 className="text-[1.1875rem] font-medium">
                                             Feedback do Projeto
                                         </h3>
-                                        <p className="text-[.9375rem] text-pale-600">
-                                            {project.feedback.content}
-                                        </p>
+                                        {project.feedback?.content
+                                            ?.split(/\. (?=[A-Z])/)
+                                            .map((paragraph, index) => (
+                                                <p
+                                                    className="text-[.9375rem] text-pale-600"
+                                                    key={index}
+                                                >
+                                                    {paragraph.trim()}
+                                                </p>
+                                            ))}
                                     </div>
                                     <div className="flex items-center gap-3">
                                         <img
                                             src={
-                                                project.feedback.client.profile
-                                                    .url
+                                                project?.feedback?.client
+                                                    ?.profile?.url
                                             }
                                             alt="Imagem de perfil do cliente"
                                             className="h-8 w-8 rounded-full md:h-12 md:w-12"
                                         />
                                         <div className="flex flex-col gap-1 font-medium leading-none">
                                             <span>
-                                                {project.feedback.client.name}
+                                                {
+                                                    project?.feedback?.client
+                                                        ?.name
+                                                }
                                             </span>
                                             <span className="text-[.875rem] text-pale-600">
-                                                {project.feedback.client.role}
+                                                {
+                                                    project?.feedback?.client
+                                                        ?.role
+                                                }
                                             </span>
                                         </div>
                                     </div>

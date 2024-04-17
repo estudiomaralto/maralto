@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useContext } from 'react'
+import { useCallback, useContext, useEffect } from 'react'
 
 import { ContactContext } from '@/contexts/contactProvider'
 
@@ -18,6 +18,16 @@ export function Contact() {
         },
         [handleSetVisibleContact]
     )
+
+    useEffect(() => {
+        if (visibleContact) document.body.style.overflowY = 'hidden'
+        window.addEventListener('keydown', handleEscape)
+
+        return () => {
+            window.removeEventListener('keydown', handleEscape)
+            document.body.removeAttribute('style')
+        }
+    }, [handleEscape, handleSetVisibleContact, visibleContact])
 
     return (
         visibleContact && (

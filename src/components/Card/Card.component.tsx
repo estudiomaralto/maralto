@@ -97,7 +97,7 @@ export function Card({
                         >
                             <div className="flex items-start justify-between">
                                 <div className="flex flex-col gap-1">
-                                    <h3 className="text-[1.0625rem] font-medium leading-none text-pale-950 md:text-[1.1875rem]">
+                                    <h3 className="text-[.9375rem] font-medium leading-none text-pale-950 md:text-[1.0625rem]">
                                         {title}
                                     </h3>
                                     <span className="text-[.8125rem] font-normal leading-none text-pale-600 md:text-[.9375rem]">

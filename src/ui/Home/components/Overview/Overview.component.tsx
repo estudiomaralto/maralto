@@ -1,9 +1,10 @@
 import { Card } from '@/components/Card/Card.component'
 import { Container } from '@/components/Container/Container.component'
 import { getLastProjects } from '@/services/getLastProjects'
+import { getLastProjectsAsd } from '@/services/getLastProjectsAsd'
 
 export default async function Overview() {
-    const { projects, error, loading } = await getLastProjects({ size: 3 })
+    const { projects, error, loading } = await getLastProjectsAsd({ size: 3 })
     return (
         <section className="bg-pale-100 py-20">
             <Container>
@@ -11,7 +12,6 @@ export default async function Overview() {
                     <h2 className="text-[1.3125rem] font-medium uppercase text-pale-950">
                         Projetos recentes
                     </h2>
-
                     <div className="grid items-start gap-4 md:grid-cols-2 lg:grid-cols-3">
                         {projects.map((project) => (
                             <Card
