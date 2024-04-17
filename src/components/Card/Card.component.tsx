@@ -57,62 +57,30 @@ export function Card({
                         </div>
                     </Link>
 
-                    {collapse ? (
-                        <div
-                            onClick={handleSetCollapse}
-                            className="flex w-full cursor-pointer flex-col gap-4 rounded-lg bg-pale-50 px-4 py-6"
-                        >
-                            <div className="flex items-start justify-between">
-                                <div className="flex w-full flex-col gap-1">
-                                    <h3 className="text-[1.0625rem] font-medium leading-none text-pale-950 md:text-[1.1875rem]">
-                                        {title}
-                                    </h3>
-                                    <span className="text-[.8125rem] font-normal leading-none text-pale-600 md:text-[.9375rem]">
-                                        {caption}
-                                    </span>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    <Chevron className="rotate-180" />
-                                </div>
+                    <div
+                        onClick={handleSetCollapse}
+                        className="group flex cursor-pointer flex-col gap-4 rounded-lg bg-pale-50 px-4 py-6"
+                    >
+                        <div className="flex items-start justify-between">
+                            <div className="flex flex-col gap-1">
+                                <h3 className="text-[.9375rem] font-medium leading-none text-pale-950 md:text-[1.0625rem]">
+                                    {title}
+                                </h3>
+                                <span className="text-[.8125rem] font-normal leading-none text-pale-600 md:text-[.9375rem]">
+                                    {caption}
+                                </span>
                             </div>
-
-                            <hr className="border-pale-200" />
-
-                            {roles.map((role, index) => (
-                                <div
-                                    className="flex items-center justify-between text-[.9375rem] text-pale-900"
-                                    key={index}
-                                >
-                                    <span className="font-medium">
-                                        {role.role}
-                                    </span>
-                                    <span>{role.time}</span>
-                                </div>
-                            ))}
+                            <Link
+                                href={`${href}`}
+                                className="flex items-center gap-2 text-pale-600"
+                            >
+                                <span className="text-[.8125rem] leading-none">
+                                    Mais detalhes
+                                </span>
+                                <Chevron className="-rotate-90" />
+                            </Link>
                         </div>
-                    ) : (
-                        <div
-                            onClick={handleSetCollapse}
-                            className="group flex cursor-pointer flex-col gap-4 rounded-lg bg-pale-50 px-4 py-6"
-                        >
-                            <div className="flex items-start justify-between">
-                                <div className="flex flex-col gap-1">
-                                    <h3 className="text-[.9375rem] font-medium leading-none text-pale-950 md:text-[1.0625rem]">
-                                        {title}
-                                    </h3>
-                                    <span className="text-[.8125rem] font-normal leading-none text-pale-600 md:text-[.9375rem]">
-                                        {caption}
-                                    </span>
-                                </div>
-                                <div className="flex items-center gap-2 text-pale-600">
-                                    <span className="text-[.8125rem] leading-none">
-                                        Mais detalhes
-                                    </span>
-                                    <Chevron />
-                                </div>
-                            </div>
-                        </div>
-                    )}
+                    </div>
                 </div>
             </motion.div>
         </AnimatePresence>

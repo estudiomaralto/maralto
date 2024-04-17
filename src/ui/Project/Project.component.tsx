@@ -43,7 +43,7 @@ export default function Project({ project }: { project: Project }) {
                                             Feedback do Projeto
                                         </h3>
                                         <div className="flex flex-col gap-2">
-                                            {project.feedback?.content
+                                            {project?.feedback?.content
                                                 ?.split(/\. (?=[A-Z])/)
                                                 .map((paragraph, index) => (
                                                     <p
@@ -128,7 +128,7 @@ export default function Project({ project }: { project: Project }) {
                     <div className="flex flex-col gap-4">
                         {project?.media?.map((image, index) => (
                             <img
-                                className="rounded-lg"
+                                className="rounded-2xl"
                                 key={index}
                                 src={image?.url}
                                 alt="imagem do projeto"
