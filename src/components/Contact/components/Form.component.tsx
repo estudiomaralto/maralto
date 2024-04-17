@@ -48,7 +48,7 @@ const contactSchema = z.object({
 
     disclaimer: z.string().min(1, 'Dê mais detalhes.'),
 
-    budgets: z.string(z.enum(budgets)),
+    budgets: z.string(z.enum(budgets)).min(1, 'Selecione seu budget.'),
 
     deliverables: z.string().optional(),
 })
@@ -59,7 +59,13 @@ export function Form() {
     const {
         register,
         handleSubmit,
-        formState: { errors, isSubmitted, isLoading, isSubmitSuccessful },
+        formState: {
+            errors,
+            isSubmitted,
+            isLoading,
+            isSubmitSuccessful,
+            isSubmitting,
+        },
         reset,
     } = useForm<ContactSchema>({
         resolver: zodResolver(contactSchema),
@@ -71,8 +77,24 @@ export function Form() {
         },
     })
 
-    function handleOnSubmit(data: ContactSchema) {
+    async function handleOnSubmit(data: ContactSchema) {
         console.log(data)
+
+        try {
+            console.log(data)
+            const { status } = await fetch('/api/leads', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            if (status === 200) {
+                reset()
+            }
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     return isSubmitSuccessful ? (
@@ -503,7 +525,7 @@ export function Form() {
                         <input
                             id="deliverables"
                             className={`block w-full rounded-lg border-[.125rem]  bg-slate-50 p-[.875rem] placeholder:text-pale-600 target:outline-blue-500 focus:outline-blue-500 ${errors.name ? 'text-red-600 outline-red-600' : 'border-slate-100 text-pale-600'}`}
-                            placeholder="Digite seus principais serviços"
+                            placeholder="Liste alguns items, caso haja."
                             type="text"
                             {...register('deliverables')}
                         />
@@ -651,7 +673,7 @@ export function Form() {
                     type="submit"
                     className="flex items-center gap-2 rounded-full bg-blue-500 px-5 py-3 text-blue-50 transition hover:bg-slate-950"
                 >
-                    {isLoading ? (
+                    {isSubmitting ? (
                         'Enviando...'
                     ) : (
                         <>
