@@ -12,7 +12,7 @@ export default async function Page() {
                     <div className="grid items-start gap-4 md:grid-cols-2 lg:grid-cols-3">
                         {projects?.map((project) => (
                             <Card
-                                href={`/project/${project.slug}`}
+                                href={`/projetos/${project.slug}`}
                                 key={project.id}
                                 src={project.media[0]?.url}
                                 roles={[
