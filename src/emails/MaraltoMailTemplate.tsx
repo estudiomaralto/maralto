@@ -10,17 +10,29 @@ import {
 } from '@react-email/components'
 
 export const MaraltoMailTemplate = ({
-    budget,
+    budgets,
     industry,
     mail,
     name,
-    phone,
+    deliverables,
+    disclaimer,
+    employee,
+    enterpriseServices,
+    referral,
+    services,
+    time,
 }: {
-    name?: string
-    mail?: string
-    phone?: string
-    budget?: string
-    industry?: string
+    budgets: string
+    deliverables?: string | null
+    disclaimer?: string | null
+    employee?: string | null
+    industry?: string | null
+    mail?: string | null
+    name?: string | null
+    referral?: string | null
+    services?: string[] | null
+    time?: string | null
+    enterpriseServices?: string | null
 }) => (
     <Html>
         <Head />
@@ -51,6 +63,78 @@ export const MaraltoMailTemplate = ({
                         }}
                     >
                         {mail}
+                    </Text>
+
+                    <Text
+                        style={{
+                            ...text,
+                            margin: '1rem 0',
+                        }}
+                    >
+                        {employee}
+                    </Text>
+
+                    <Text
+                        style={{
+                            ...text,
+                            margin: '1rem 0',
+                        }}
+                    >
+                        {budgets}
+                    </Text>
+
+                    <Text
+                        style={{
+                            ...text,
+                            margin: '1rem 0',
+                        }}
+                    >
+                        {deliverables}
+                    </Text>
+
+                    <Text
+                        style={{
+                            ...text,
+                            margin: '1rem 0',
+                        }}
+                    >
+                        {enterpriseServices}
+                    </Text>
+
+                    <Text
+                        style={{
+                            ...text,
+                            margin: '1rem 0',
+                        }}
+                    >
+                        {time}
+                    </Text>
+
+                    <Text
+                        style={{
+                            ...text,
+                            margin: '1rem 0',
+                        }}
+                    >
+                        {referral}
+                    </Text>
+
+                    <Text
+                        style={{
+                            ...text,
+                            margin: '1rem 0',
+                        }}
+                    >
+                        {services}
+                    </Text>
+
+                    <Text
+                        style={{
+                            ...text,
+                            margin: '1rem 0',
+                        }}
+                    >
+                        {disclaimer}
                     </Text>
 
                     <Text

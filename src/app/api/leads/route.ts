@@ -63,10 +63,17 @@ export async function POST(request: Request) {
             to: ['contato@estudiomaralto.com', 'samuelcardoso555@gmail.com'],
             subject: 'Novo lead! - Estúdio Maralto',
             react: MaraltoMailTemplate({
-                budget: budgets,
+                budgets,
                 industry: industry!,
-                mail: mail!,
-                name: name!,
+                mail,
+                name,
+                deliverables,
+                disclaimer,
+                employee,
+                enterpriseServices,
+                referral,
+                services,
+                time,
             }),
         })
 
