@@ -24,10 +24,17 @@ export default function Project({ project }: { project: Project }) {
                                         {project?.industry}
                                     </p>
                                 </div>
-                                <div>
-                                    <p className="text-[.9375rem] text-pale-600 md:text-[1.0625rem]">
-                                        {project?.description}
-                                    </p>
+                                <div className="flex flex-col gap-4">
+                                    {project?.description
+                                        ?.split(/\. (?=[A-Z])/)
+                                        .map((paragraph, index) => (
+                                            <p
+                                                className="text-[.9375rem] text-pale-600 md:text-[1.0625rem]"
+                                                key={index}
+                                            >
+                                                {paragraph.trim()}
+                                            </p>
+                                        ))}
                                 </div>
                                 <hr className="border-pale-100" />
                                 <div className="flex flex-col gap-8 md:max-w-[87.5%]">
