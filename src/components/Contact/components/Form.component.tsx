@@ -646,7 +646,7 @@ export function Form() {
                 </div>
             </div>
 
-            <div className="flex w-full justify-end border-t border-t-blue-950 border-opacity-[.08] pb-4 pt-6 md:pb-8">
+            <div className="flex w-full justify-end border-t border-t-blue-950 border-opacity-[.08] pb-[8vh] pt-6 md:pb-8">
                 <button
                     type="submit"
                     className="flex items-center gap-2 rounded-full bg-blue-500 px-5 py-3 text-blue-50 transition hover:bg-slate-950"

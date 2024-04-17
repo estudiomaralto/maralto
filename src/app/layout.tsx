@@ -51,6 +51,9 @@ export default function RootLayout({
     return (
         <Providers>
             <html lang="pt-br" className={circularStd.className}>
+                <head>
+                    <link rel="icon" href="./favicon.ico" type="image/ico" />
+                </head>
                 <body className="bg-pale-50">
                     <Header />
                     {children}
