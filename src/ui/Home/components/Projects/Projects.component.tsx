@@ -52,7 +52,7 @@ export default async function Projects() {
                 )}
                 <div className="flex w-full justify-center">
                     <Button
-                        href={'/projects'}
+                        href={'/projetos'}
                         colors="dark"
                         sizes="medium"
                         content="Ver todos os projetos"
