@@ -41,6 +41,9 @@ export const metadata: Metadata = {
     title: 'Estúdio Maralto',
     description:
         'Criamos obras visuais e estratégicas para negócios que desejam ser sólidos, lucrativos e memoráveis.',
+    icons: {
+        icon: './favicon.ico',
+    },
 }
 
 export default function RootLayout({
@@ -51,9 +54,6 @@ export default function RootLayout({
     return (
         <Providers>
             <html lang="pt-br" className={circularStd.className}>
-                <head>
-                    <link rel="icon" href="./favicon.ico" type="image/ico" />
-                </head>
                 <body className="bg-pale-50">
                     <Header />
                     {children}
