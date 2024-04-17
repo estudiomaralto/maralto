@@ -17,7 +17,7 @@ interface FloatingTypes
 const floating = tv({
     slots: {
         base: 'fixed bottom-[1vh] w-full z-10 px-3 md:max-w-[444px]',
-        button: 'flex items-center w-full gap-1 text-nowrap rounded-full bg-pale-50 px-[11px] md:px-[15px] py-[11px] text-[13px] leading-none transition hover:bg-pale-950 hover:text-pale-50 md:text-[15px]',
+        button: 'flex items-center justify-between w-full gap-1 text-nowrap rounded-full bg-pale-50 px-[11px] md:px-[15px] py-[11px] text-[13px] leading-none transition hover:bg-pale-950 hover:text-pale-50 md:text-[15px]',
     },
     variants: {
         position: {
