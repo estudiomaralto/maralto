@@ -8,6 +8,6 @@ export default async function Page({
 }: {
     params: { slug: string }
 }) {
-    const { project } = await getSingleProject({ slug })
-    return project ? <Project project={project} /> : redirect('/')
+    const { project, error } = await getSingleProject({ slug })
+    return !error ? <Project project={project} /> : redirect('/')
 }
