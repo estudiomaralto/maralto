@@ -1,10 +1,10 @@
 import { Card } from '@/components/Card/Card.component'
 import { Container } from '@/components/Container/Container.component'
 import { Spinner } from '@/components/Spinner/Spinner.component'
-import { getProjects } from '@/services/getProjects'
+import { getLastProjectsAsd } from '@/services/getLastProjectsAsd'
 
 export default async function Page() {
-    const { projects, error, loading } = await getProjects()
+    const { projects, error, loading } = await getLastProjectsAsd({ size: 12 })
     return (
         <section className="bg-pale-100 py-20 lg:py-[7.5rem]">
             <Container className="flex flex-col gap-16">
