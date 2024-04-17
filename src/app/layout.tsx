@@ -1,6 +1,6 @@
 import './globals.css'
 
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import localFont from 'next/font/local'
 
 import { Contact } from '@/components/Contact/Contact.component'
@@ -37,13 +37,17 @@ const circularStd = localFont({
     variable: '--font-main',
 })
 
+export const viewport: Viewport = {
+    themeColor: '#49B8C4',
+}
+
 export const metadata: Metadata = {
     title: 'Estúdio Maralto',
-    themeColor: '#49B8C4',
+
     description:
         'Criamos obras visuais e estratégicas para negócios que desejam ser sólidos, lucrativos e memoráveis.',
     icons: {
-        icon: './favicon.ico',
+        icon: '/src/app/favicon.ico',
     },
 }
 
