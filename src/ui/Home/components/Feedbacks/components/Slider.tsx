@@ -9,7 +9,7 @@ import Slide from './Slide.component'
 
 export default function Slider({ feedbacks }: { feedbacks: Feedback[] }) {
     return (
-        <Swiper autoHeight grabCursor enabled={!!feedbacks}>
+        <Swiper autoHeight grabCursor enabled={!!feedbacks} loop>
             {feedbacks.map((feedback, index) => (
                 <SwiperSlide key={index}>
                     <Slide feedback={feedback} />

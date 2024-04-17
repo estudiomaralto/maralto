@@ -1,12 +1,10 @@
-import { Button } from '@/components/Button/Button.component'
 import { Card } from '@/components/Card/Card.component'
 import { Container } from '@/components/Container/Container.component'
 import { Spinner } from '@/components/Spinner/Spinner.component'
-import { getLastProjectsAsd } from '@/services/getLastProjectsAsd'
+import { getProjects } from '@/services/getProjects'
 
-export default async function Projects() {
-    const { projects, error, loading } = await getLastProjectsAsd({ size: 6 })
-
+export default async function Page() {
+    const { projects, error, loading } = await getProjects()
     return (
         <section className="bg-pale-100 py-20 lg:py-[7.5rem]">
             <Container className="flex flex-col gap-16">
@@ -50,14 +48,6 @@ export default async function Projects() {
                 ) : (
                     <Spinner />
                 )}
-                <div className="flex w-full justify-center">
-                    <Button
-                        href={'/projects'}
-                        colors="dark"
-                        sizes="medium"
-                        content="Ver todos os projetos"
-                    />
-                </div>
             </Container>
         </section>
     )

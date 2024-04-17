@@ -31,7 +31,7 @@ export function Contact() {
 
     return (
         visibleContact && (
-            <div className="fixed bottom-0 left-0 right-0 top-0 z-[9999999999] min-h-screen w-full rounded-xl border border-slate-100 bg-slate-50 md:left-auto md:right-1 md:top-1 md:max-w-[37.75rem]">
+            <div className="fixed bottom-0 left-0 right-0 top-0 z-[9999999999] min-h-screen w-full rounded-xl border border-slate-100 bg-slate-50 md:bottom-1 md:left-auto md:right-1 md:top-1 md:max-w-[37.75rem]">
                 <div className="scrollbar-hidden flex h-full min-h-screen w-full flex-col gap-11 overflow-y-scroll px-4 pt-4 md:px-8 md:pt-8">
                     <button onClick={handleSetVisibleContact}>
                         <svg
