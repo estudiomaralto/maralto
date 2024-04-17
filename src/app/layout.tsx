@@ -49,6 +49,9 @@ export const metadata: Metadata = {
     icons: {
         icon: '/src/app/favicon.ico',
     },
+    openGraph: {
+        images: ['/src/images/heroConde.webp'],
+    },
 }
 
 export default function RootLayout({

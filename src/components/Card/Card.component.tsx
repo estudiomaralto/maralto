@@ -105,7 +105,7 @@ export function Card({
                                     </span>
                                 </div>
                                 <div className="flex items-center gap-2 text-pale-600">
-                                    <span className="text-[.9375rem] leading-none">
+                                    <span className="text-[.8125rem] leading-none">
                                         Mais detalhes
                                     </span>
                                     <Chevron />

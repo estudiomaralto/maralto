@@ -24,7 +24,7 @@ export default function Project({ project }: { project: Project }) {
                                         {project?.industry}
                                     </p>
                                 </div>
-                                <div className="flex flex-col gap-4">
+                                <div className="flex flex-col gap-2">
                                     {project?.description
                                         ?.split(/\. (?=[A-Z])/)
                                         .map((paragraph, index) => (
@@ -42,16 +42,18 @@ export default function Project({ project }: { project: Project }) {
                                         <h3 className="text-[1.1875rem] font-medium">
                                             Feedback do Projeto
                                         </h3>
-                                        {project.feedback?.content
-                                            ?.split(/\. (?=[A-Z])/)
-                                            .map((paragraph, index) => (
-                                                <p
-                                                    className="text-[.9375rem] text-pale-600"
-                                                    key={index}
-                                                >
-                                                    {paragraph.trim()}
-                                                </p>
-                                            ))}
+                                        <div className="flex flex-col gap-2">
+                                            {project.feedback?.content
+                                                ?.split(/\. (?=[A-Z])/)
+                                                .map((paragraph, index) => (
+                                                    <p
+                                                        className="text-[.9375rem] text-pale-600"
+                                                        key={index}
+                                                    >
+                                                        {paragraph.trim()}
+                                                    </p>
+                                                ))}
+                                        </div>
                                     </div>
                                     <div className="flex items-center gap-3">
                                         <img
