@@ -39,6 +39,7 @@ const circularStd = localFont({
 
 export const metadata: Metadata = {
     title: 'Estúdio Maralto',
+    themeColor: '#49B8C4',
     description:
         'Criamos obras visuais e estratégicas para negócios que desejam ser sólidos, lucrativos e memoráveis.',
     icons: {
