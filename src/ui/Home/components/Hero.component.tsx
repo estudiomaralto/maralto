@@ -58,7 +58,6 @@ export default async function Hero() {
                 </Container>
                 <Marquee autoFill={true} className="flex gap-4 overflow-y-auto">
                     <svg
-                        width="2995"
                         className="h-16 md:h-44"
                         viewBox="0 0 2995 167"
                         fill="none"
