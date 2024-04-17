@@ -116,6 +116,15 @@ export const MaraltoMailTemplate = ({
                             margin: '1rem 0',
                         }}
                     >
+                        {industry}
+                    </Text>
+
+                    <Text
+                        style={{
+                            ...text,
+                            margin: '1rem 0',
+                        }}
+                    >
                         {referral}
                     </Text>
 
@@ -135,23 +144,6 @@ export const MaraltoMailTemplate = ({
                         }}
                     >
                         {disclaimer}
-                    </Text>
-
-                    <Text
-                        style={{
-                            ...text,
-                            margin: '1rem 0',
-                        }}
-                    >
-                        {budget}
-                    </Text>
-                    <Text
-                        style={{
-                            ...text,
-                            margin: '1rem 0',
-                        }}
-                    >
-                        {industry}
                     </Text>
                 </code>
                 <Text

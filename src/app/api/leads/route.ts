@@ -64,7 +64,7 @@ export async function POST(request: Request) {
             subject: 'Novo lead! - Estúdio Maralto',
             react: MaraltoMailTemplate({
                 budgets,
-                industry: industry!,
+                industry,
                 mail,
                 name,
                 deliverables,
