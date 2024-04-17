@@ -35,11 +35,11 @@ export default async function Hero() {
                             <div className="flex gap-1 md:gap-3">
                                 {projects.map((project) => (
                                     <Link
-                                        href={`/project/${project.slug}`}
-                                        key={project.id}
+                                        href={`/projeto/${project.slug}`}
+                                        key={project?.id}
                                     >
                                         <img
-                                            src={project.cover.url}
+                                            src={project?.cover?.url}
                                             alt="Imagem de projeto"
                                             className="h-12 w-12 rounded-full object-cover md:h-16 md:w-16"
                                         />

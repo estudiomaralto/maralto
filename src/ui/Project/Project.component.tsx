@@ -123,6 +123,16 @@ export default function Project({ project }: { project: Project }) {
                             </div>
                         </div>
                     </div>
+                    <div className="flex flex-col gap-4">
+                        {project?.media?.map((image, index) => (
+                            <img
+                                className="rounded-lg"
+                                key={index}
+                                src={image?.url}
+                                alt="imagem do projeto"
+                            />
+                        ))}
+                    </div>
                 </div>
             </Container>
         </section>
