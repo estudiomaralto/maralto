@@ -36,10 +36,10 @@ export default function Project({ project }: { project: Project }) {
                                             </p>
                                         ))}
                                 </div>
-                                {project.feedback && (
+                                <hr className="border-pale-100" />
+                                {/* {project.feedback && (
                                     <>
                                         {' '}
-                                        <hr className="border-pale-100" />
                                         <div className="flex flex-col gap-8 md:max-w-[87.5%]">
                                             <div className="flex flex-col gap-5">
                                                 <h3 className="text-[1.1875rem] font-medium">
@@ -90,7 +90,35 @@ export default function Project({ project }: { project: Project }) {
                                             </div>
                                         </div>
                                     </>
-                                )}
+                                )} */}
+
+                                <>
+                                    <div className="flex items-center gap-3">
+                                        <img
+                                            src={
+                                                project?.feedback.client.profile
+                                                    .url
+                                            }
+                                            alt="Imagem de perfil do cliente"
+                                            className="h-8 w-8 rounded-full md:h-12 md:w-12"
+                                        />
+                                        <div className="flex flex-col gap-1 font-medium leading-none">
+                                            <span>
+                                                {
+                                                    project?.feedback?.client
+                                                        ?.name
+                                                }
+                                            </span>
+                                            <span className="text-[.875rem] text-pale-600">
+                                                {
+                                                    project?.feedback?.client
+                                                        ?.role
+                                                }
+                                            </span>
+                                        </div>
+                                    </div>
+                                </>
+
                                 <hr className="border-pale-100" />
                             </div>
                         </div>
