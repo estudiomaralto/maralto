@@ -96,8 +96,8 @@ export default function Project({ project }: { project: Project }) {
                                     <div className="flex items-center gap-3">
                                         <img
                                             src={
-                                                project?.feedback.client.profile
-                                                    .url
+                                                project?.feedback?.client
+                                                    ?.profile?.url
                                             }
                                             alt="Imagem de perfil do cliente"
                                             className="h-8 w-8 rounded-full md:h-12 md:w-12"
