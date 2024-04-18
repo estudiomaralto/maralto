@@ -14,14 +14,14 @@ export async function Header() {
                     <Link href={'/'} className="self-center">
                         <Maralto />
                     </Link>
-                    <div className="hidden justify-end gap-5 leading-none md:flex md:text-[1.0625rem]">
+                    <div className="justify-end gap-5 leading-none md:flex md:text-[1.0625rem]">
                         <Link
                             href={'/projetos'}
                             className="transition hover:text-pale-300"
                         >
                             Projetos
                         </Link>
-                        <ContactButton />
+                        <ContactButton className="hidden md:block" />
                     </div>
                 </div>
             </Container>
