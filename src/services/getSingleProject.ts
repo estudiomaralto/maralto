@@ -19,7 +19,7 @@ export async function getSingleProject({ slug }: { slug: string }) {
                         id
                         url
                     }
-                    media {
+                    media(first: 35) {
                         id
                         url
                     }
