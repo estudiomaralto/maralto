@@ -13,8 +13,8 @@ export default async function Page() {
                         {projects?.map((project) => (
                             <Card
                                 href={`/projeto/${project.slug}`}
-                                key={project.id}
-                                src={project.media[0]?.url}
+                                key={project?.id}
+                                src={project?.cover.url}
                                 roles={[
                                     {
                                         role: 'Design',
