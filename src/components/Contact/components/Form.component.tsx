@@ -565,8 +565,7 @@ export function Form() {
 
                     <div className="flex flex-col items-start gap-2">
                         <span className="max-w-[75%]">
-                            Qual é o seu orçamento estimado para o projeto de
-                            design de marca?
+                            Qual é o seu orçamento estimado para este trabalho?
                         </span>
                         <div className="flex flex-wrap gap-2">
                             {budgets.map((budget, index) => (

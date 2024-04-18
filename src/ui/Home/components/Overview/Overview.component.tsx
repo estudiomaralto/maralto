@@ -1,10 +1,9 @@
 import { Card } from '@/components/Card/Card.component'
 import { Container } from '@/components/Container/Container.component'
-import { getLastProjects } from '@/services/getLastProjects'
-import { getLastProjectsAsd } from '@/services/getLastProjectsAsd'
+import { getFavoriteProjects } from '@/services/getFavoriteProjects'
 
 export default async function Overview() {
-    const { projects, error, loading } = await getLastProjectsAsd({ size: 3 })
+    const { projects, error, loading } = await getFavoriteProjects({ size: 3 })
     return (
         <section className="bg-pale-100 py-20">
             <Container>
@@ -16,7 +15,7 @@ export default async function Overview() {
                         {projects.map((project) => (
                             <Card
                                 href={`/projeto/${project.slug}`}
-                                key={project.id}
+                                key={project?.id}
                                 src={project?.cover.url}
                                 roles={[
                                     {
@@ -33,8 +32,8 @@ export default async function Overview() {
                                     },
                                 ]}
                                 createdAt={new Date(project.createdAt)}
-                                title={project.name}
-                                caption={project.industry}
+                                title={project?.name}
+                                caption={project?.industry}
                             />
                         ))}
                     </div>
