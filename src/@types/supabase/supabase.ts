@@ -11,7 +11,7 @@ export type Database = {
         Tables: {
             leads: {
                 Row: {
-                    budget: string
+                    budget: string | null
                     created_at: string
                     deliverables: string | null
                     disclaimer: string | null
@@ -19,14 +19,16 @@ export type Database = {
                     enterpriseServices: string | null
                     id: number
                     industry: string | null
+                    instagram: string | null
                     mail: string | null
                     name: string | null
+                    phone: string | null
                     referral: string | null
                     services: string[] | null
                     time: string | null
                 }
                 Insert: {
-                    budget: string
+                    budget?: string | null
                     created_at?: string
                     deliverables?: string | null
                     disclaimer?: string | null
@@ -34,14 +36,16 @@ export type Database = {
                     enterpriseServices?: string | null
                     id?: number
                     industry?: string | null
+                    instagram?: string | null
                     mail?: string | null
                     name?: string | null
+                    phone?: string | null
                     referral?: string | null
                     services?: string[] | null
                     time?: string | null
                 }
                 Update: {
-                    budget?: string
+                    budget?: string | null
                     created_at?: string
                     deliverables?: string | null
                     disclaimer?: string | null
@@ -49,8 +53,10 @@ export type Database = {
                     enterpriseServices?: string | null
                     id?: number
                     industry?: string | null
+                    instagram?: string | null
                     mail?: string | null
                     name?: string | null
+                    phone?: string | null
                     referral?: string | null
                     services?: string[] | null
                     time?: string | null

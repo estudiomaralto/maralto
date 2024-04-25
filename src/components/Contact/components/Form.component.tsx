@@ -1,6 +1,8 @@
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useForm } from 'react-hook-form'
+import { Controller, useForm } from 'react-hook-form'
 import { z } from 'zod'
+
+import { formatPhoneNumber } from './useForm'
 
 const referrals = [
     'Behance',
@@ -32,6 +34,21 @@ const contactSchema = z.object({
 
     mail: z.string().email('Digite um e-mail válido.'),
 
+    phone: z
+        .string()
+        .min(10, 'O número de telefone deve ter pelo menos 10 dígitos')
+        .transform((data) => {
+            return data
+                .replace(/\D/g, '')
+                .replace(/^(\d{2})(\d)/g, '($1) $2')
+                .replace(/^\((\d{2})\) 9/, '($1) 9 ')
+                .replace(/(\d)(\d{4})$/, '$1-$2')
+        }),
+
+    instagram: z
+        .string()
+        .url({ message: 'Digite o url do Instagram de sua empresa.' }),
+
     referral: z.string(z.enum(referrals)),
 
     services: z.array(z.string(z.enum(services))),
@@ -59,6 +76,7 @@ export function Form() {
     const {
         register,
         handleSubmit,
+        control,
         formState: {
             errors,
             isSubmitted,
@@ -206,6 +224,111 @@ export function Form() {
                                     />
                                 </svg>
                                 {errors.mail?.message}
+                            </span>
+                        )}
+                    </label>
+
+                    <label
+                        htmlFor="instagram"
+                        className="flex cursor-pointer flex-col items-start gap-2"
+                    >
+                        <span>Qual o instagram da empresa?</span>
+                        <input
+                            id="instagram"
+                            className={`block w-full rounded-lg border-[.125rem]  bg-slate-50 p-[.875rem] placeholder:text-pale-600 target:outline-blue-500 focus:outline-blue-500 ${errors.name ? 'text-red-600 outline-red-600' : 'border-slate-100 text-pale-600'}`}
+                            placeholder="https://www.instagram.com/estudiomaralto"
+                            type="text"
+                            {...register('instagram')}
+                        />
+                        {errors.instagram && (
+                            <span className="flex items-center gap-2 text-[.8125rem] tracking-[0.04em] text-red-600">
+                                <svg
+                                    className="animate-pulse"
+                                    width="12"
+                                    height="12"
+                                    viewBox="0 0 12 12"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <rect
+                                        x="2"
+                                        y="2"
+                                        width="8"
+                                        height="8"
+                                        rx="4"
+                                        fill="currentColor"
+                                    />
+                                    <rect
+                                        x="1"
+                                        y="1"
+                                        width="10"
+                                        height="10"
+                                        rx="5"
+                                        stroke="currentColor"
+                                        strokeOpacity="0.2"
+                                        strokeWidth="2"
+                                    />
+                                </svg>
+                                {errors.instagram?.message}
+                            </span>
+                        )}
+                    </label>
+
+                    <label
+                        htmlFor="phone"
+                        className="flex cursor-pointer flex-col items-start gap-2"
+                    >
+                        <span>Qual o seu telefone?</span>
+
+                        <Controller
+                            name="phone"
+                            control={control}
+                            render={({ field }) => (
+                                <input
+                                    {...field}
+                                    className={`block w-full rounded-lg border-[.125rem]  bg-slate-50 p-[.875rem] placeholder:text-pale-600 target:outline-blue-500 focus:outline-blue-500 ${errors.name ? 'text-red-600 outline-red-600' : 'border-slate-100 text-pale-600'}`}
+                                    placeholder="(11) 9 8809-0092"
+                                    id="phone"
+                                    required
+                                    value={formatPhoneNumber(field.value)}
+                                    onChange={(e) => {
+                                        field.onChange(e.target.value)
+                                    }}
+                                    maxLength={16}
+                                />
+                            )}
+                        />
+
+                        {errors.phone && (
+                            <span className="flex items-center gap-2 text-[.8125rem] tracking-[0.04em] text-red-600">
+                                <svg
+                                    className="animate-pulse"
+                                    width="12"
+                                    height="12"
+                                    viewBox="0 0 12 12"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <rect
+                                        x="2"
+                                        y="2"
+                                        width="8"
+                                        height="8"
+                                        rx="4"
+                                        fill="currentColor"
+                                    />
+                                    <rect
+                                        x="1"
+                                        y="1"
+                                        width="10"
+                                        height="10"
+                                        rx="5"
+                                        stroke="currentColor"
+                                        strokeOpacity="0.2"
+                                        strokeWidth="2"
+                                    />
+                                </svg>
+                                {errors.phone?.message}
                             </span>
                         )}
                     </label>

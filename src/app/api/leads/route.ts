@@ -22,19 +22,25 @@ export async function POST(request: Request) {
         time,
         services,
         referral,
+        instagram,
+        phone,
         enterpriseServices,
     }: {
-        budgets: string
-        deliverables?: string | null
-        disclaimer?: string | null
-        employee?: string | null
-        industry?: string | null
-        mail?: string | null
-        name?: string | null
-        referral?: string | null
-        services?: string[] | null
-        time?: string | null
-        enterpriseServices?: string | null
+        budgets: string | null
+        created_at: string
+        deliverables: string | null
+        disclaimer: string | null
+        employee: string | null
+        enterpriseServices: string | null
+        id: number
+        industry: string | null
+        instagram: string | null
+        mail: string | null
+        name: string | null
+        phone: string | null
+        referral: string | null
+        services: string[] | null
+        time: string | null
     } = await request.json()
 
     try {
@@ -50,6 +56,8 @@ export async function POST(request: Request) {
                 disclaimer,
                 industry,
                 mail,
+                instagram,
+                phone,
                 name,
                 time,
                 services,
@@ -63,17 +71,19 @@ export async function POST(request: Request) {
             to: ['contato@estudiomaralto.com', 'samuelcardoso555@gmail.com'],
             subject: 'Novo lead! - Estúdio Maralto',
             react: MaraltoMailTemplate({
-                budgets,
-                industry,
-                mail,
-                name,
-                deliverables,
-                disclaimer,
-                employee,
-                enterpriseServices,
-                referral,
-                services,
-                time,
+                budget: budgets!,
+                industry: industry!,
+                mail: mail!,
+                name: name!,
+                deliverables: deliverables!,
+                disclaimer: disclaimer!,
+                employee: employee!,
+                enterpriseServices: enterpriseServices!,
+                referral: referral!,
+                services: services!,
+                time: time!,
+                phone: phone!,
+                instagram: instagram!,
             }),
         })
 

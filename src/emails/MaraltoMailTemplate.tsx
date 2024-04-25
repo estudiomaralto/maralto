@@ -10,7 +10,7 @@ import {
 } from '@react-email/components'
 
 export const MaraltoMailTemplate = ({
-    budgets,
+    budget,
     industry,
     mail,
     name,
@@ -21,18 +21,22 @@ export const MaraltoMailTemplate = ({
     referral,
     services,
     time,
+    instagram,
+    phone,
 }: {
-    budgets: string
-    deliverables?: string | null
-    disclaimer?: string | null
-    employee?: string | null
-    industry?: string | null
-    mail?: string | null
-    name?: string | null
-    referral?: string | null
-    services?: string[] | null
-    time?: string | null
-    enterpriseServices?: string | null
+    budget: string
+    deliverables: string
+    disclaimer: string
+    employee: string
+    enterpriseServices: string
+    industry: string
+    instagram: string
+    mail: string
+    name: string
+    phone: string
+    referral: string
+    services: string[]
+    time: string
 }) => (
     <Html>
         <Head />
@@ -71,6 +75,24 @@ export const MaraltoMailTemplate = ({
                             margin: '1rem 0',
                         }}
                     >
+                        {phone}
+                    </Text>
+
+                    <Text
+                        style={{
+                            ...text,
+                            margin: '1rem 0',
+                        }}
+                    >
+                        {instagram}
+                    </Text>
+
+                    <Text
+                        style={{
+                            ...text,
+                            margin: '1rem 0',
+                        }}
+                    >
                         {employee}
                     </Text>
 
@@ -80,7 +102,7 @@ export const MaraltoMailTemplate = ({
                             margin: '1rem 0',
                         }}
                     >
-                        {budgets}
+                        {budget}
                     </Text>
 
                     <Text
