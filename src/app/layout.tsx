@@ -43,57 +43,27 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
     title: 'Estúdio Maralto',
-
     description:
         'Criamos obras visuais e estratégicas para negócios que desejam ser sólidos, lucrativos e memoráveis.',
+    applicationName: 'Estúdio Maralto',
+
+    verification: {
+        google: '',
+    },
+
     icons: {
         icon: '/src/app/favicon.ico',
     },
     openGraph: {
+        type: 'website',
+        emails: 'contato@estudiomaralto.com',
+        countryName: 'Brasil',
+        url: 'https://estudiomaralto.com',
+        description:
+            'Criamos obras visuais e estratégicas para negócios que desejam ser sólidos, lucrativos e memoráveis.',
         images: ['/src/images/heroConde.webp'],
     },
 }
-
-// export const metadata: Metadata = {
-//     title: 'Resolvoo | Problemas com Voo? Seja indenizado!',
-//     description:
-//         'Com a Resolvoo, você que teve problemas como voo cancelado e bagagem extraviada, conseguirá sua indenização de forma simples e 100% online. Somos uma consultoria especializada em direito do consumidor para viagens aéreas. Defendemos os direitos dos passageiros, oferecendo orientação legal em casos de atrasos, cancelamentos, extravios de bagagem e outros problemas. Obtenha indenizações por danos morais, reembolso de passagens e resolução de litígios aéreos. Conte com nossa experiência para garantir que seus direitos como passageiro sejam protegidos.',
-//     applicationName: 'Resolvoo',
-
-//     keywords: [
-//         'consultoria jurídica',
-//         'direito do consumidor',
-//         'viagens aéreas',
-//         'indenização por voo atrasado',
-//         'cancelamento de voo',
-//         'extravio de bagagem',
-//         'reembolso de passagens aéreas',
-//         'direitos do passageiro',
-//         'compensação por overbooking',
-//         'advogado de direito do consumidor',
-//         'empresa aérea',
-//         'reclamação de voo',
-//         'legislação aérea',
-//         'danos morais',
-//         'responsabilidade civil',
-//         'passageiro aéreo',
-//         'orientação legal',
-//         'assistência jurídica',
-//         'litígio aéreo',
-//         'resolução de conflitos.',
-//     ],
-
-//     openGraph: {
-//         description:
-//             'Com a Resolvoo, você que teve problemas como voo cancelado e bagagem extraviada, conseguirá sua indenização de forma simples e 100% online. Somos uma consultoria especializada em direito do consumidor para viagens aéreas. Defendemos os direitos dos passageiros, oferecendo orientação legal em casos de atrasos, cancelamentos, extravios de bagagem e outros problemas. Obtenha indenizações por danos morais, reembolso de passagens e resolução de litígios aéreos. Conte com nossa experiência para garantir que seus direitos como passageiro sejam protegidos.',
-//         images: '../../public/resolvoo-opengraph.png',
-//         type: 'website',
-//     },
-
-//     verification: {
-//         google: 'FHsfN8zBydcttXwvPLdL4gelTJzUAzGQr_hEGOHiWrE',
-//     },
-// }
 
 export default function RootLayout({
     children,
