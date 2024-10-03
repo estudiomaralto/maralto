@@ -66,12 +66,6 @@ export async function Footer() {
                 </div>
                 <div className="flex flex-col gap-5">
                     <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-center">
-                        <ul className="hidden text-[.9375rem] font-bold uppercase text-blue-800 md:flex md:flex-col md:gap-1">
-                            Local
-                            <li className="text-[.9375rem] font-normal normal-case leading-none text-blue-50">
-                                {data?.main?.temp.toFixed(0)}° Londrina, Paraná
-                            </li>
-                        </ul>
                         <ul className="flex flex-col gap-1 text-[.9375rem] font-bold uppercase text-blue-800">
                             Social
                             <div className="flex gap-8 leading-none lg:gap-16">
