@@ -10,7 +10,6 @@ import {
 } from '@react-email/components'
 
 export const MaraltoMailTemplate = ({
-    budget,
     industry,
     mail,
     name,
@@ -24,7 +23,6 @@ export const MaraltoMailTemplate = ({
     instagram,
     phone,
 }: {
-    budget: string
     deliverables: string
     disclaimer: string
     employee: string
@@ -101,9 +99,7 @@ export const MaraltoMailTemplate = ({
                             ...text,
                             margin: '1rem 0',
                         }}
-                    >
-                        {budget}
-                    </Text>
+                    ></Text>
 
                     <Text
                         style={{

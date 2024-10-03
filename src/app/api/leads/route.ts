@@ -12,7 +12,6 @@ export async function POST(request: Request) {
     const supabase = createClient(cookieStore)
 
     const {
-        budgets,
         deliverables,
         employee,
         disclaimer,
@@ -26,7 +25,6 @@ export async function POST(request: Request) {
         phone,
         enterpriseServices,
     }: {
-        budgets: string | null
         created_at: string
         deliverables: string | null
         disclaimer: string | null
@@ -50,7 +48,6 @@ export async function POST(request: Request) {
             data,
         } = await supabase.from('leads').insert([
             {
-                budget: budgets,
                 deliverables,
                 employee,
                 disclaimer,
@@ -71,7 +68,6 @@ export async function POST(request: Request) {
             to: ['contato@estudiomaralto.com', 'samuelcardoso555@gmail.com'],
             subject: 'Novo lead! - Estúdio Maralto',
             react: MaraltoMailTemplate({
-                budget: budgets!,
                 industry: industry!,
                 mail: mail!,
                 name: name!,

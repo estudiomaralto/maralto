@@ -23,12 +23,6 @@ const services = [
 
 const employees = ['Apenas eu', 'Até 10', 'Até 30', '+50'] as const
 
-const budgets = [
-    'Até R$ 8.000,00',
-    'Até R$ 15.000,00',
-    'Mais de R$ 30.000,00',
-] as const
-
 const contactSchema = z.object({
     name: z.string().min(2, 'Digite seu nome e sobrenome.'),
 
@@ -65,8 +59,6 @@ const contactSchema = z.object({
 
     disclaimer: z.string().min(1, 'Dê mais detalhes.'),
 
-    budgets: z.string(z.enum(budgets)).min(1, 'Selecione seu budget.'),
-
     deliverables: z.string().optional(),
 })
 
@@ -91,7 +83,6 @@ export function Form() {
             services: [services[0]],
             referral: referrals[0],
             employee: employees[0],
-            budgets: budgets[0],
         },
     })
 
@@ -685,60 +676,6 @@ export function Form() {
                             </span>
                         )}
                     </label>
-
-                    <div className="flex flex-col items-start gap-2">
-                        <span className="max-w-[75%]">
-                            Qual é o seu orçamento estimado para este trabalho?
-                        </span>
-                        <div className="flex flex-wrap gap-2">
-                            {budgets.map((budget, index) => (
-                                <label
-                                    className="block cursor-pointer rounded-full border border-pale-950 p-6 px-5 py-[.8125rem] leading-none transition hover:border-[transparent] hover:bg-blue-900 hover:text-blue-50 has-[:checked]:border-[transparent] has-[:checked]:bg-blue-500 has-[:checked]:text-blue-50"
-                                    key={index}
-                                >
-                                    <input
-                                        type="radio"
-                                        className="hidden h-full w-full"
-                                        value={budget}
-                                        {...register('budgets')}
-                                    />
-                                    {budget}
-                                </label>
-                            ))}
-                        </div>
-                        {errors.budgets && (
-                            <span className="flex items-center gap-2 text-[.8125rem] tracking-[0.04em] text-red-600">
-                                <svg
-                                    className="animate-pulse"
-                                    width="12"
-                                    height="12"
-                                    viewBox="0 0 12 12"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <rect
-                                        x="2"
-                                        y="2"
-                                        width="8"
-                                        height="8"
-                                        rx="4"
-                                        fill="currentColor"
-                                    />
-                                    <rect
-                                        x="1"
-                                        y="1"
-                                        width="10"
-                                        height="10"
-                                        rx="5"
-                                        stroke="currentColor"
-                                        strokeOpacity="0.2"
-                                        strokeWidth="2"
-                                    />
-                                </svg>
-                                {errors.budgets?.message}
-                            </span>
-                        )}
-                    </div>
 
                     <label
                         htmlFor="disclaimer"
