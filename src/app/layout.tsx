@@ -46,6 +46,7 @@ export const metadata: Metadata = {
     description:
         'Criamos obras visuais e estratégicas para negócios que desejam ser sólidos, lucrativos e memoráveis.',
     applicationName: 'Estúdio Maralto',
+    metadataBase: new URL('https://estudiomaralto.com'),
 
     verification: {
         google: '',
@@ -61,7 +62,13 @@ export const metadata: Metadata = {
         url: 'https://estudiomaralto.com',
         description:
             'Criamos obras visuais e estratégicas para negócios que desejam ser sólidos, lucrativos e memoráveis.',
-        images: ['/src/images/heroConde.webp'],
+        images: [
+            {
+                url: 'https://estudiomaralto.com/_next/static/media/heroConde.dce3fd81.webp',
+                width: 800,
+                height: 600,
+            },
+        ],
     },
 }
 

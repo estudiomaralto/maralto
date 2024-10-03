@@ -20,18 +20,9 @@ interface CardProps {
     href: Url
 }
 
-export function Card({
-    src,
-    caption,
-    createdAt,
-    roles,
-    title,
-    href,
-}: CardProps) {
+export function Card({ src, caption, createdAt, title, href }: CardProps) {
     const [collapse, setCollapse] = useState<boolean>(false)
     const caseTime = differenceInDays(createdAt, new Date())
-
-    console.log(caseTime)
 
     function handleSetCollapse() {
         setCollapse((preState) => !preState)
