@@ -32,7 +32,7 @@ export async function Footer() {
                                     <Link href={'/'}>Início</Link>
                                 </li>
                                 <li className="cursor-pointer text-[.9375rem] font-normal normal-case text-blue-50 hover:text-blue-100">
-                                    <Link href={'/projects'}>Projetos</Link>
+                                    <Link href={'/projectos'}>Projetos</Link>
                                 </li>
                             </div>
                         </ul>
