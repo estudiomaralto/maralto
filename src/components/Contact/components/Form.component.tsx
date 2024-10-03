@@ -8,18 +8,11 @@ const referrals = [
     'Behance',
     'Instagram',
     'Anúncios',
-    'Dribbble',
+    'Evento',
     'Recomendação',
 ] as const
 
-const services = [
-    'Identidade visual',
-    '3D',
-    'Motion design',
-    'Naming',
-    'Design de interface',
-    'Desenvolvimento Web',
-] as const
+const services = ['Identidade visual', '3D', 'Naming', 'Branding'] as const
 
 const employees = ['Apenas eu', 'Até 10', 'Até 30', '+50'] as const
 
