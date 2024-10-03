@@ -31,6 +31,8 @@ export function Card({
     const [collapse, setCollapse] = useState<boolean>(false)
     const caseTime = differenceInDays(createdAt, new Date())
 
+    console.log(caseTime)
+
     function handleSetCollapse() {
         setCollapse((preState) => !preState)
     }
@@ -44,7 +46,7 @@ export function Card({
                 <div className="rounded-lg bg-pale-50">
                     <Link href={`${href}`}>
                         <div className="relative h-[26.25rem] overflow-hidden rounded-lg">
-                            {caseTime < 30 && (
+                            {caseTime >= 7 && (
                                 <span className="leading none absolute left-4 top-4 z-10 rounded-full bg-slate-50 px-[.6875rem] py-[.4375rem] text-[.9375rem] font-medium text-slate-950">
                                     Nova obra
                                 </span>
