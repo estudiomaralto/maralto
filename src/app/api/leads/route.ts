@@ -12,7 +12,6 @@ export async function POST(request: Request) {
     const supabase = createClient(cookieStore)
 
     const {
-        deliverables,
         employee,
         disclaimer,
         industry,
@@ -26,7 +25,6 @@ export async function POST(request: Request) {
         enterpriseServices,
     }: {
         created_at: string
-        deliverables: string | null
         disclaimer: string | null
         employee: string | null
         enterpriseServices: string | null
@@ -48,7 +46,6 @@ export async function POST(request: Request) {
             data,
         } = await supabase.from('leads').insert([
             {
-                deliverables,
                 employee,
                 disclaimer,
                 industry,
@@ -71,7 +68,6 @@ export async function POST(request: Request) {
                 industry: industry!,
                 mail: mail!,
                 name: name!,
-                deliverables: deliverables!,
                 disclaimer: disclaimer!,
                 employee: employee!,
                 enterpriseServices: enterpriseServices!,

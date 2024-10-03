@@ -51,8 +51,6 @@ const contactSchema = z.object({
         .min(1, 'Digite, pelo menos, um produto, serviço.'),
 
     disclaimer: z.string().min(1, 'Dê mais detalhes.'),
-
-    deliverables: z.string().optional(),
 })
 
 type ContactSchema = z.infer<typeof contactSchema>
@@ -616,67 +614,11 @@ export function Form() {
                     </label>
 
                     <label
-                        htmlFor="deliverables"
-                        className="flex cursor-pointer flex-col items-start gap-2"
-                    >
-                        <span className="flex flex-col">
-                            Além da marca, você gostaria de receber um orçamento
-                            para outros elementos derivados da nova identidade
-                            visual a ser criada?
-                            <span className="block max-w-[80%] text-[.8125rem] text-slate-400">
-                                Ex.: itens de papelaria, itens digitais, itens
-                                promocionais, etc. Se sim, por favor liste quais
-                                e quantos de cada.
-                            </span>
-                        </span>
-                        <input
-                            id="deliverables"
-                            className={`block w-full rounded-lg border-[.125rem]  bg-slate-50 p-[.875rem] placeholder:text-pale-600 target:outline-blue-500 focus:outline-blue-500 ${errors.name ? 'text-red-600 outline-red-600' : 'border-slate-100 text-pale-600'}`}
-                            placeholder="Liste alguns itens, caso haja."
-                            type="text"
-                            {...register('deliverables')}
-                        />
-                        {errors.deliverables && (
-                            <span className="flex items-center gap-2 text-[.8125rem] tracking-[0.04em] text-red-600">
-                                <svg
-                                    className="animate-pulse"
-                                    width="12"
-                                    height="12"
-                                    viewBox="0 0 12 12"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <rect
-                                        x="2"
-                                        y="2"
-                                        width="8"
-                                        height="8"
-                                        rx="4"
-                                        fill="currentColor"
-                                    />
-                                    <rect
-                                        x="1"
-                                        y="1"
-                                        width="10"
-                                        height="10"
-                                        rx="5"
-                                        stroke="currentColor"
-                                        strokeOpacity="0.2"
-                                        strokeWidth="2"
-                                    />
-                                </svg>
-                                {errors.deliverables?.message}
-                            </span>
-                        )}
-                    </label>
-
-                    <label
                         htmlFor="disclaimer"
                         className="flex cursor-pointer flex-col items-start gap-2"
                     >
                         <span className="max-w-[85%]">
-                            Fique à vontade para contribuir com outras
-                            informações pertinentes sobre sua marca.
+                            Descreva brevemente sobre seu negócio
                         </span>
                         <textarea
                             id="disclaimer"

@@ -13,7 +13,6 @@ export const MaraltoMailTemplate = ({
     industry,
     mail,
     name,
-    deliverables,
     disclaimer,
     employee,
     enterpriseServices,
@@ -23,7 +22,6 @@ export const MaraltoMailTemplate = ({
     instagram,
     phone,
 }: {
-    deliverables: string
     disclaimer: string
     employee: string
     enterpriseServices: string
@@ -100,15 +98,6 @@ export const MaraltoMailTemplate = ({
                             margin: '1rem 0',
                         }}
                     ></Text>
-
-                    <Text
-                        style={{
-                            ...text,
-                            margin: '1rem 0',
-                        }}
-                    >
-                        {deliverables}
-                    </Text>
 
                     <Text
                         style={{
